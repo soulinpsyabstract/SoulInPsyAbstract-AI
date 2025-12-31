@@ -1,42 +1,11 @@
-const CACHE_NAME = 'sipa-cache-v1';
-const CORE = [
-  '/', '/index.html','/gallery.html','/nft.html','/manifest.html','/poems.html','/songs.html','/faq.html','/contacts.html','/ai.html',
-  '/assets/css/main.css','/assets/js/core.js','/assets/js/site.config.json','/assets/texts/hero_phrases.json','/manifest.webmanifest'
+const C='sipa-v1';
+const ASSETS=[
+  '/', '/index.html','/gallery.html','/nft.html','/manifest.html','/poems.html','/songs.html','/faq.html','/contacts.html',
+  '/assets/css/main.css','/assets/css/fonts.css',
+  '/assets/js/app.js','/assets/js/hero6.js','/assets/js/data.js','/assets/js/data-bridge.js','/assets/js/meta.js','/assets/js/titles.js','/assets/js/texts.js',
+  '/assets/js/pay-config.js','/assets/js/pay-shim.js','/assets/js/buy-hook.js','/assets/js/buy-modal.js','/assets/js/sections.js','/assets/js/player.js',
+  '/assets/texts/hero_phrases.json','/assets/texts/about.txt','/assets/texts/songs.html'
 ];
-
-self.addEventListener('install', (event)=>{
-  event.waitUntil(caches.open(CACHE_NAME).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting()));
-});
-
-self.addEventListener('activate', (event)=>{
-  event.waitUntil(
-    caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE_NAME).map(k=>caches.delete(k))))
-      .then(()=>self.clients.claim())
-  );
-});
-
-self.addEventListener('fetch', (event)=>{
-  const req = event.request;
-  const url = new URL(req.url);
-  if(req.method !== 'GET' || url.origin !== location.origin) return;
-
-  const isHTML = req.headers.get('accept')?.includes('text/html');
-  if(isHTML){
-    event.respondWith(
-      fetch(req).then(res=>{
-        const copy = res.clone();
-        caches.open(CACHE_NAME).then(c=>c.put(req, copy));
-        return res;
-      }).catch(()=>caches.match(req).then(r=>r||caches.match('/index.html')))
-    );
-    return;
-  }
-
-  event.respondWith(
-    caches.match(req).then(cached => cached || fetch(req).then(res=>{
-      const copy = res.clone();
-      caches.open(CACHE_NAME).then(c=>c.put(req, copy));
-      return res;
-    }))
-  );
-});
+self.addEventListener('install',e=>{e.waitUntil(caches.open(C).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting()))});
+self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==C).map(k=>caches.delete(k)))) )});
+self.addEventListener('fetch',e=>{e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request)))});

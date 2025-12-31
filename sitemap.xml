@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>/index.html</loc></url>
-  <url><loc>/gallery.html</loc></url>
-  <url><loc>/nft.html</loc></url>
-  <url><loc>/manifest.html</loc></url>
-  <url><loc>/poems.html</loc></url>
-  <url><loc>/songs.html</loc></url>
-  <url><loc>/faq.html</loc></url>
-  <url><loc>/contacts.html</loc></url>
-  <url><loc>/ai.html</loc></url>
+  <url><loc>https://soulinpsyabstract.42web.io/</loc></url>
+  <url><loc>https://soulinpsyabstract.42web.io/gallery.html</loc></url>
+  <url><loc>https://soulinpsyabstract.42web.io/nft.html</loc></url>
+  <url><loc>https://soulinpsyabstract.42web.io/manifest.html</loc></url>
+  <url><loc>https://soulinpsyabstract.42web.io/poems.html</loc></url>
+  <url><loc>https://soulinpsyabstract.42web.io/songs.html</loc></url>
+  <url><loc>https://soulinpsyabstract.42web.io/faq.html</loc></url>
+  <url><loc>https://soulinpsyabstract.42web.io/contacts.html</loc></url>
 </urlset>

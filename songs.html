@@ -1,33 +1,51 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" class="js">
 <head>
-  <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Songs — Песни — Soul in PsyAbstract</title>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Songs — Soul in PsyAbstract</title>
+  <meta name="description" content="Песни и эмбиент под рисунки. Встроенный плеер и плейлист."/>
   <link rel="canonical" href="https://soulinpsyabstract.42web.io/songs.html"/>
-  <link rel="icon" type="image/png" href="../assets/img/favicon.png"/>
-  <link rel="stylesheet" href="../assets/css/fonts.css?v=10"/>
-  <link rel="stylesheet" href="../assets/css/main.css?v=10"/>
+  <meta property="og:type" content="music.playlist"><meta property="og:title" content="Songs — Soul in PsyAbstract">
+  <meta property="og:image" content="https://soulinpsyabstract.42web.io/assets/img/og_cover.jpg">
+  <meta property="og:url" content="https://soulinpsyabstract.42web.io/songs.html">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/css/fonts.css"><link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
 <nav class="nav">
   <a class="brand" href="index.html"><span class="logo"></span><span>Soul in PsyAbstract</span></a>
-  <div class="menu">
-    <a class="" href="index.html">Home</a><a href="gallery.html">Gallery</a><a href="nft.html">NFT</a>
-    <a href="manifest.html">Manifest</a><a href="poems.html">Poems</a><a href="songs.html">Songs</a>
-    <a href="faq.html">FAQ</a><a href="contacts.html">Contacts</a><a href="blog.html">News</a>
-  </div>
-  <div class="lang"><button class="btn" id="lang-en">EN</button><button class="btn" id="lang-ru">RU</button></div>
+  <button class="btn navtoggle" type="button" aria-label="Menu" title="Menu">☰</button>
+  <div class="menu"><a href="poems.html">Poems</a></div>
+  <div class="lang"><button class="btn langbtn" data-lang="en">EN</button><button class="btn langbtn" data-lang="ru">RU</button></div>
 </nav>
+
 <main class="wrap">
-
-<h1 data-lang="en" class="show">Songs</h1>
-<h1 data-lang="ru">Песни</h1>
-<div id="songs-html" class="card"></div>
-<script src="../assets/js/text-pages.js?v=10"></script>
-
+  <div class="two">
+    <section class="card lang-content active" data-lang="ru">
+      <h1>Музыка</h1>
+      <div id="player"></div>
+      <div id="songs_ru"></div>
+    </section>
+    <section class="card lang-content" data-lang="en">
+      <h1>Music</h1>
+      <div id="player_en"></div>
+      <div id="songs_en"></div>
+    </section>
+  </div>
 </main>
-<footer class="footer">© <span id="y"></span> Soul in PsyAbstract — Marina</footer>
-<script src="../assets/js/i18n.js?v=10"></script>
-<script src="../assets/js/app.js?v=10"></script>
+
+<footer class="footer">© <span id="y"></span> Soul in PsyAbstract</footer>
+<script src="assets/js/player.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/texts.js"></script>
+<script>
+  window.TRACKS = [
+    {title:"Ambient Dawn", url:"assets/audio/ambient_dawn.mp3", dur: "3:12"},
+    {title:"Neon Spiral", url:"assets/audio/neon_spiral.mp3", dur: "2:58"},
+    {title:"Heart Line", url:"assets/audio/heart_line.mp3", dur: "3:44"}
+  ];
+  initPlayer('player', window.TRACKS);
+  initPlayer('player_en', window.TRACKS);
+</script>
 </body>
 </html>

@@ -1,133 +1,39 @@
 <!doctype html>
-
-<html lang="ru">
-
+<html lang="ru" class="js">
 <head>
-
   <meta charset="utf-8"/>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Gallery — Soul in PsyAbstract</title>
-
-  <meta name="description" content="Галерея работ: Hearts & Spirals • messy sketch • neon acrylic."/>
-
-  <link rel="icon" href="assets/img/favicon.png"/>
-
-  <link rel="stylesheet" href="assets/css/main.css?v=dn7"/>
-
+  <meta name="description" content="Галерея 01.jpg…94.jpg. Buy, NFT, Exclusive +200."/>
+  <link rel="canonical" href="https://soulinpsyabstract.42web.io/gallery.html"/>
+  <meta property="og:type" content="website"><meta property="og:title" content="Gallery — Soul in PsyAbstract">
+  <meta property="og:image" content="https://soulinpsyabstract.42web.io/assets/img/og_cover.jpg">
+  <meta property="og:url" content="https://soulinpsyabstract.42web.io/gallery.html">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/css/fonts.css"><link rel="stylesheet" href="assets/css/main.css">
 </head>
-
 <body>
+<nav class="nav">
+  <a class="brand" href="index.html"><span class="logo"></span><span>Soul in PsyAbstract</span></a>
+  <button class="btn navtoggle" type="button" aria-label="Menu" title="Menu">☰</button>
+  <div class="menu"><a href="nft.html">NFT</a><a href="faq.html">FAQ</a></div>
+  <div class="lang"><button class="btn langbtn" data-lang="en">EN</button><button class="btn langbtn" data-lang="ru">RU</button></div>
+</nav>
 
-<div class="wrap">
+<main class="wrap">
+  <h1 class="lang-content active" data-lang="ru">Галерея</h1>
+  <h1 class="lang-content" data-lang="en">Gallery</h1>
+  <div id="gallery" class="grid"></div>
+</main>
 
-  <nav class="nav">
-
-    <a class="brand" href="index.html">Soul in PsyAbstract</a>
-
-    <div style="display:flex;gap:10px;align-items:center">
-
-      <div class="lang">
-
-        <button class="btn langbtn" data-lang="ru">RU</button>
-
-        <button class="btn langbtn" data-lang="en">EN</button>
-
-      </div>
-
-      <div class="menu">
-
-        <a href="index.html">Home</a>
-
-        <a class="active" href="gallery.html">Gallery</a>
-
-        <a href="nft.html">NFT</a>
-
-        <a href="manifest.html">Manifest</a>
-
-        <a href="poems.html">Poems</a>
-
-        <a href="contacts.html">Contacts</a>
-
-        <a href="fag.html">FAQ</a>
-
-      </div>
-
-    </div>
-
-  </nav>
-
-  <header class="card neon">
-
-    <h1 class="lang-content show" data-lang="ru">Галерея</h1>
-
-    <h1 class="lang-content" data-lang="en">Gallery</h1>
-
-    <p class="muted lang-content show" data-lang="ru">Наведи курсор — неоновое свечение ✨</p>
-
-    <p class="muted lang-content" data-lang="en">Hover to get neon glow ✨</p>
-
-  </header>
-
-  <!-- Панель фильтров -->
-
-  <div class="gallery-top">
-
-    <div class="filters">
-
-      <button class="btn filter active" data-filter="all">All</button>
-
-      <button class="btn filter" data-filter="acrylic">Acrylic / Neon</button>
-
-      <button class="btn filter" data-filter="spiral">Labyrinth Spirals</button>
-
-      <button class="btn filter" data-filter="sketch">Sketch</button>
-
-      <button class="btn filter" data-filter="free">Available</button>
-
-    </div>
-
-    <div class="badge">Hover = neon glow ✨</div>
-
-  </div>
-
-  <!-- Контейнер сетки (ВАЖНО: этот id ожидает твой рендер) -->
-
-  <div class="gallery-grid" id="galleryGrid"></div>
-
-  <footer class="footer">
-
-    <div>© 2025 Soul in PsyAbstract</div>
-
-    <div class="muted">Neon acrylic • hearts & spirals</div>
-
-  </footer>
-
-</div>
-
-<!-- ТВОИ СКРИПТЫ -->
-
-<script src="assets/js/data.js?v=7"></script>
-
-<script src="assets/js/data-bridge.js?v=7"></script>
-
-<script src="assets/js/meta.js?v=1"></script>
-
-<script src="assets/js/pay-config.js?v=1"></script>
-
-<script src="assets/js/pay-shim.js?v=1"></script>
-
-<script src="assets/js/titles.js?v=1"></script>
-
-<script src="assets/js/buy-hook.js?v=1"></script>
-
-<script src="assets/js/buy-modal.js?v=7"></script>
-
-<script src="assets/js/app.js?v=7"></script>
-
-<script src="assets/js/site-global.js?v=7"></script>
-
+<footer class="footer">© <span id="y"></span> Soul in PsyAbstract</footer>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/pay-config.js"></script>
+<script src="assets/js/data-bridge.js"></script>
+<script src="assets/js/pay-shim.js"></script>
+<script src="assets/js/buy-hook.js"></script>
+<script src="assets/js/buy-modal.js"></script>
+<script src="assets/js/sections.js"></script>
+<script src="assets/js/app.js"></script>
 </body>
-
 </html>

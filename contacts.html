@@ -1,307 +1,46 @@
 <!doctype html>
-
-<html lang="ru">
-
+<html lang="ru" class="js">
 <head>
-
-  <meta charset="utf-8"/>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Contacts — Soul in PsyAbstract</title>
-
-  <meta name="description" content="Связаться с Soul in PsyAbstract: WhatsApp, Telegram, Instagram, TikTok, Zora, Rarible, email и телефон. RU / EN."/>
-
-  <link rel="icon" href="assets/img/favicon.png"/>
-
-  <!-- Твои глобальные стили с Dark Neon -->
-
-  <link rel="stylesheet" href="assets/css/main.css?v=dn6"/>
-
-  <!-- Небольшой локальный стиль страницы (без конфликтов) -->
-
-  <style>
-
-    .contacts-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
-
-    @media (max-width:980px){.contacts-wrap{grid-template-columns:1fr}}
-
-    .btn.stack{display:flex;align-items:center;gap:10px;justify-content:flex-start;width:100%;padding:12px 14px;border-radius:14px;text-decoration:none}
-
-    .btn.stack strong{font-weight:800}
-
-    .btn.whatsapp{background:#0f2a22;border-color:rgba(127,255,212,.25)}
-
-    .btn.telegram{background:#0f1e2a;border-color:rgba(127,255,212,.25)}
-
-    .btn.instagram{background:#2a1020;border-color:rgba(177,92,255,.25)}
-
-    .btn.tiktok{background:#151515;border-color:#222}
-
-    .btn.nft{background:#1a1326;border-color:rgba(177,92,255,.25)}
-
-    .btn.site{background:#10171e}
-
-    .btn.mail{background:#241508}
-
-    .btn.phone{background:#0f1419}
-
-    .qrgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
-
-    .qr{display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;background:rgba(15,22,32,.65);border:1px solid var(--line);border-radius:14px;padding:10px}
-
-    .qr img{width:140px;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff}
-
-    .qr small{color:var(--muted)}
-
-    /* язык: используем твою механику .lang-content + .show */
-
-    .lang-content{display:none}
-
-    .lang-content.show{display:block}
-
-  </style>
-
+  <meta name="description" content="Связь: Telegram, WhatsApp, Email. QR вставлены."/>
+  <link rel="canonical" href="https://soulinpsyabstract.42web.io/contacts.html"/>
+  <meta property="og:type" content="profile"><meta property="og:title" content="Contacts — Soul in PsyAbstract">
+  <meta property="og:image" content="https://soulinpsyabstract.42web.io/assets/img/og_cover.jpg">
+  <meta property="og:url" content="https://soulinpsyabstract.42web.io/contacts.html">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/css/fonts.css"><link rel="stylesheet" href="assets/css/main.css">
 </head>
-
 <body>
-
-<div class="wrap">
-
-  <!-- NAV (как на всех страницах) -->
-
-  <nav class="nav">
-
-    <a class="brand" href="index.html">Soul in PsyAbstract</a>
-
-    <div style="display:flex;align-items:center;gap:10px">
-
-      <div class="lang">
-
-        <button class="btn langbtn" data-lang="ru">RU</button>
-
-        <button class="btn langbtn" data-lang="en">EN</button>
-
-      </div>
-
-      <div class="menu">
-
-        <a href="index.html">Home</a>
-
-        <a href="gallery.html">Gallery</a>
-
-        <a href="nft.html">NFT</a>
-
-        <a href="manifest.html">Manifest</a>
-
-        <a class="active" href="contacts.html">Contacts</a>
-
-      </div>
-
-    </div>
-
-  </nav>
-
-  <!-- HEADER -->
-
-  <header class="card neon">
-
-    <h1 class="lang-content show" data-lang="ru">Контакты и связь</h1>
-
-    <h1 class="lang-content" data-lang="en">Contacts & Connect</h1>
-
-    <p class="muted lang-content show" data-lang="ru">Всегда на связи — выбери удобный способ.</p>
-
-    <p class="muted lang-content" data-lang="en">Reach me anywhere — pick what’s convenient.</p>
-
-  </header>
-
-  <!-- CONTENT -->
-
-  <section class="contacts-wrap">
-
-    <!-- LEFT: кнопки -->
-
-    <div class="card">
-
-      <div class="lang-content show" data-lang="ru">
-
-        <div style="display:grid;gap:10px">
-
-          <a class="btn stack whatsapp" href="https://wa.me/972525074743" target="_blank" rel="noopener">💬 <strong>WhatsApp чат</strong></a>
-
-          <a class="btn stack whatsapp" href="https://wa.me/c/972525074743" target="_blank" rel="noopener">🛍 Каталог в WhatsApp</a>
-
-          <a class="btn stack whatsapp" href="https://wa.me/p/24479478801689836/972525074743" target="_blank" rel="noopener">🔎 Товар в WhatsApp</a>
-
-          <a class="btn stack telegram" href="https://t.me/messysketch" target="_blank" rel="noopener">📢 Telegram группа</a>
-
-          <a class="btn stack telegram" href="https://t.me/SoulInPsyAbstract" target="_blank" rel="noopener">👤 Telegram канал</a>
-
-          <a class="btn stack instagram" href="https://instagram.com/soul.in.psyabstract" target="_blank" rel="noopener">📸 Instagram</a>
-
-          <a class="btn stack tiktok" href="https://tiktok.com/@soulinpsyabstract" target="_blank" rel="noopener">🎵 TikTok</a>
-
-          <a class="btn stack nft" href="https://zora.co/@soulinpsyabstract" target="_blank" rel="noopener">⚡ Zora</a>
-
-          <a class="btn stack nft" href="https://og.rarible.com/soulinpsyabstract" target="_blank" rel="noopener">💎 Rarible</a>
-
-          <a class="btn stack site" href="https://SoulInPsyAbstract.art" target="_blank" rel="noopener">🌐 SoulInPsyAbstract.art</a>
-
-          <a class="btn stack mail" href="mailto:soulinpsyabstract@gmail.com">📧 soulinpsyabstract@gmail.com</a>
-
-          <a class="btn stack phone" href="tel:+972525074743">📱 +972 52&nbsp;507&nbsp;4743</a>
-
-        </div>
-
-      </div>
-
-      <div class="lang-content" data-lang="en">
-
-        <div style="display:grid;gap:10px">
-
-          <a class="btn stack whatsapp" href="https://wa.me/972525074743" target="_blank" rel="noopener">💬 <strong>WhatsApp chat</strong></a>
-
-          <a class="btn stack whatsapp" href="https://wa.me/c/972525074743" target="_blank" rel="noopener">🛍 WhatsApp catalog</a>
-
-          <a class="btn stack whatsapp" href="https://wa.me/p/24479478801689836/972525074743" target="_blank" rel="noopener">🔎 Product in WhatsApp</a>
-
-          <a class="btn stack telegram" href="https://t.me/messysketch" target="_blank" rel="noopener">📢 Telegram group</a>
-
-          <a class="btn stack telegram" href="https://t.me/SoulInPsyAbstract" target="_blank" rel="noopener">👤 Telegram channel</a>
-
-          <a class="btn stack instagram" href="https://instagram.com/soul.in.psyabstract" target="_blank" rel="noopener">📸 Instagram</a>
-
-          <a class="btn stack tiktok" href="https://tiktok.com/@soulinpsyabstract" target="_blank" rel="noopener">🎵 TikTok</a>
-
-          <a class="btn stack nft" href="https://zora.co/@soulinpsyabstract" target="_blank" rel="noopener">⚡ Zora</a>
-
-          <a class="btn stack nft" href="https://og.rarible.com/soulinpsyabstract" target="_blank" rel="noopener">💎 Rarible</a>
-
-          <a class="btn stack site" href="https://SoulInPsyAbstract.art" target="_blank" rel="noopener">🌐 SoulInPsyAbstract.art</a>
-
-          <a class="btn stack mail" href="mailto:soulinpsyabstract@gmail.com">📧 soulinpsyabstract@gmail.com</a>
-
-          <a class="btn stack phone" href="tel:+972525074743">📱 +972 52&nbsp;507&nbsp;4743</a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- RIGHT: QR -->
-
-    <div class="card">
-
-      <h3 class="lang-content show" data-lang="ru">Быстрые QR</h3>
-
-      <h3 class="lang-content" data-lang="en">Quick QR</h3>
-
-      <div class="qrgrid" style="margin-top:8px">
-
-        <div class="qr">
-
-          <img src="Acsses/Img/qr_instagram.jpg" alt="Instagram QR"/>
-
-          <div>Instagram<br><small>@soul.in.psyabstract</small></div>
-
-        </div>
-
-        <div class="qr">
-
-          <img src="Acsses/Img/qr_theat.jpg" alt="Threads QR"/>
-
-          <div>Threads<br><small>@soul.in.psyabstract</small></div>
-
-        </div>
-
-        <div class="qr">
-
-          <img src="Acsses/Img/qr_tiktok.jpg" alt="TikTok QR"/>
-
-          <div>TikTok<br><small>@soulinpsyabstract</small></div>
-
-        </div>
-
-        <div class="qr">
-
-          <img src="Acsses/Img/qr_telegram_personal.jpg" alt="Telegram Group QR"/>
-
-          <div>Telegram (group)<br><small>@messysketch</small></div>
-
-        </div>
-
-        <div class="qr">
-
-          <img src="Acsses/Img/qr_telegram_soulinpsyabstract_art.jpg" alt="Telegram Channel QR"/>
-
-          <div>Telegram (channel)<br><small>@SoulInPsyAbstract</small></div>
-
-        </div>
-
-        <div class="qr">
-
-          <img src="Acsses/Img/qr_whatsapp.jpg" alt="WhatsApp QR"/>
-
-          <div>WhatsApp<br><small>+972 52-507-4743</small></div>
-
-        </div>
-
-        <div class="qr">
-
-          <img src="Acsses/Img/zoratoken.jpg" alt="Zora QR"/>
-
-          <div>Zora<br><small>zora.co/@soulinpsyabstract</small></div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <footer class="footer">
-
-    <div>© 2025 Soul in PsyAbstract</div>
-
-    <div style="display:flex;gap:10px">
-
-      <a href="https://rarible.com/soulinpsyabstract" target="_blank" rel="noopener">Rarible</a>
-
-      <a href="https://t.me/SoulInPsyAbstract" target="_blank" rel="noopener">Telegram</a>
-
-    </div>
-
-  </footer>
-
-</div>
-
-<!-- ТВОИ СКРИПТЫ (порядок не меняю) -->
-
-<script src="assets/js/data.js?v=7"></script>
-
-<script src="assets/js/data-bridge.js?v=7"></script>
-
-<script src="assets/js/meta.js?v=1"></script>
-
-<script src="assets/js/pay-config.js?v=1"></script>
-
-<script src="assets/js/pay-shim.js?v=1"></script>
-
-<script src="assets/js/titles.js?v=1"></script>
-
-<script src="assets/js/buy-hook.js?v=1"></script>
-
-<script src="assets/js/buy-modal.js?v=7"></script>
-
-<script src="assets/js/app.js?v=7"></script>
-
-<!-- Глобальная логика языка/SEO/© если она у тебя в site-global.js -->
-
-<script src="assets/js/site-global.js?v=7"></script>
-
+<nav class="nav">
+  <a class="brand" href="index.html"><span class="logo"></span><span>Soul in PsyAbstract</span></a>
+  <button class="btn navtoggle" type="button" aria-label="Menu" title="Menu">☰</button>
+  <div class="lang"><button class="btn langbtn" data-lang="en">EN</button><button class="btn langbtn" data-lang="ru">RU</button></div>
+</nav>
+<main class="wrap">
+  <div class="grid contacts">
+    <article class="tile">
+      <img src="assets/img/qr_whatsapp.jpg" alt="WhatsApp QR">
+      <a class="btn" target="_blank" href="https://wa.me/972525074743">WhatsApp</a>
+    </article>
+    <article class="tile">
+      <img src="assets/img/qr_telegram_group.jpg" alt="Telegram QR">
+      <a class="btn" target="_blank" href="https://t.me/messysketch">Telegram</a>
+    </article>
+    <article class="tile">
+      <img src="assets/img/qr_threads.jpg" alt="Threads QR">
+      <span class="btn muted">Threads</span>
+    </article>
+    <article class="tile">
+      <img src="assets/img/qr_tiktok.jpg" alt="TikTok QR">
+      <span class="btn muted">TikTok</span>
+    </article>
+  </div>
+  <div class="card" style="margin-top:12px">
+    <p>Email: <a href="mailto:soulinpsyabstract@gmail.com">soulinpsyabstract@gmail.com</a></p>
+  </div>
+</main>
+<footer class="footer">© <span id="y"></span> Soul in PsyAbstract</footer>
+<script src="assets/js/app.js"></script>
 </body>
-
 </html>
