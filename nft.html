@@ -1,49 +1,256 @@
 <!doctype html>
-<html lang="ru" data-lang="ru">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>NFT · Soul in PsyAbstract</title>
-  <meta name="theme-color" content="#0b0d10">
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="assets/css/fonts.css">
-  <link rel="stylesheet" href="assets/css/main.css">
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>NFT — Soul in PsyAbstract</title>
+  <link rel="stylesheet" href="assets/css/fonts.css?v=10"/>
+  <link rel="stylesheet" href="assets/css/main.css?v=10"/>
+  <style>
+    .nft-grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .nft-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px}
+    .nft-badge{display:inline-block;padding:2px 8px;border:1px solid var(--line);border-radius:999px;font-size:12px;color:var(--muted)}
+    .nft-card h3{margin:8px 0 6px}
+    .nft-card p{margin:0 0 10px}
+  </style>
 </head>
 <body>
-  <div class="wrap">
-    <header class="topbar">
-      <div class="brand">
-        <div class="title">SoulInPsyAbstract AI</div>
-        <div class="sub">SIPA · pages connected · no 404 drama</div>
-      </div>
-      
-      <nav class="nav">
-        <a href="index.html" data-i18n="nav.home">Главная</a>
-        <a href="gallery.html" data-i18n="nav.gallery">Галерея</a>
-        <a href="nft.html" data-i18n="nav.nft">NFT</a>
-        <a href="manifest.html" data-i18n="nav.manifest">Манифест</a>
-        <a href="poems.html" data-i18n="nav.poems">Стихи</a>
-        <a href="songs.html" data-i18n="nav.songs">Песни</a>
-        <a href="faq.html" data-i18n="nav.faq">FAQ</a>
-        <a href="contacts.html" data-i18n="nav.contacts">Контакты</a>
-        <a href="ai.html" data-i18n="nav.ai">AI</a>
-      </nav>
-    
-      <button class="btn" id="lang-toggle">RU</button>
-    </header>
-
-    <main class="card">
-      <h1 class="h1" data-i18n="nav.nft">NFT</h1>
-      <p class="p">Список ссылок подтягивается из assets/js/site.config.json → nft.links.</p>
-<div id="nft-list"></div>
-    </main>
-
-    <footer class="card">
-      <div class="p">Aelin AquaSoul Art Creator · Soul In PsyAbstract</div>
-    </footer>
+<nav class="nav">
+  <a class="brand" href="index.html"><span class="logo"></span><span>Soul in PsyAbstract</span></a>
+  <div class="menu">
+    <a href="index.html">Home</a><a href="gallery.html">Gallery</a><a href="nft.html">NFT</a>
+    <a href="manifest.html">Manifest</a><a href="poems.html">Poems</a><a href="songs.html">Songs</a>
+    <a href="faq.html">FAQ</a><a href="contacts.html">Contacts</a><a href="blog.html">News</a>
   </div>
+  <div class="lang"><button class="btn" id="lang-en">EN</button><button class="btn" id="lang-ru">RU</button></div>
+</nav>
 
-  <script src="assets/js/pwa.js" defer></script>
-  <script src="assets/js/core.js" defer></script>
+<main class="wrap">
+  <h1 data-lang="en" class="show">NFT (Rarible)</h1>
+  <h1 data-lang="ru">NFT (Rarible)</h1>
+  <section class="card">
+    <div data-lang="en" class="show"><b>Notes</b><br>Curated links from Rarible. Availability & prices depend on platform.<br>ETH: <code>0x2a7fFb7B3174fcA16CD2476a55E39f9Ea2d04073</code>.</div>
+    <div data-lang="ru"><b>Заметки</b><br>Подборка ссылок с Rarible. Наличие и цены — на площадке.<br>ETH: <code>0x2a7fFb7B3174fcA16CD2476a55E39f9Ea2d04073</code>.</div>
+  </section>
+  <div class="nft-grid">
+    <article class="nft-card">
+      <span class="nft-badge">Rarible</span>
+      <h3 data-lang="en" class="show">NFT Link</h3>
+      <h3 data-lang="ru">Ссылка на NFT</h3>
+      <p class="muted" data-lang="en">Opens in new tab.</p>
+      <p class="muted" data-lang="ru">Откроется в новой вкладке.</p>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046501" target="_blank" rel="noopener" data-lang="en">Open</a>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046501" target="_blank" rel="noopener" data-lang="ru">Открыть</a>
+    </article>
+    
+    <article class="nft-card">
+      <span class="nft-badge">Rarible</span>
+      <h3 data-lang="en" class="show">NFT Link</h3>
+      <h3 data-lang="ru">Ссылка на NFT</h3>
+      <p class="muted" data-lang="en">Opens in new tab.</p>
+      <p class="muted" data-lang="ru">Откроется в новой вкладке.</p>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046499" target="_blank" rel="noopener" data-lang="en">Open</a>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046499" target="_blank" rel="noopener" data-lang="ru">Открыть</a>
+    </article>
+    
+    <article class="nft-card">
+      <span class="nft-badge">Rarible</span>
+      <h3 data-lang="en" class="show">NFT Link</h3>
+      <h3 data-lang="ru">Ссылка на NFT</h3>
+      <p class="muted" data-lang="en">Opens in new tab.</p>
+      <p class="muted" data-lang="ru">Откроется в новой вкладке.</p>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046497" target="_blank" rel="noopener" data-lang="en">Open</a>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046497" target="_blank" rel="noopener" data-lang="ru">Открыть</a>
+    </article>
+    
+    <article class="nft-card">
+      <span class="nft-badge">Rarible</span>
+      <h3 data-lang="en" class="show">NFT Link</h3>
+      <h3 data-lang="ru">Ссылка на NFT</h3>
+      <p class="muted" data-lang="en">Opens in new tab.</p>
+      <p class="muted" data-lang="ru">Откроется в новой вкладке.</p>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046496" target="_blank" rel="noopener" data-lang="en">Open</a>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046496" target="_blank" rel="noopener" data-lang="ru">Открыть</a>
+    </article>
+    
+    <article class="nft-card">
+      <span class="nft-badge">Rarible</span>
+      <h3 data-lang="en" class="show">NFT Link</h3>
+      <h3 data-lang="ru">Ссылка на NFT</h3>
+      <p class="muted" data-lang="en">Opens in new tab.</p>
+      <p class="muted" data-lang="ru">Откроется в новой вкладке.</p>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046494" target="_blank" rel="noopener" data-lang="en">Open</a>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046494" target="_blank" rel="noopener" data-lang="ru">Открыть</a>
+    </article>
+    
+    <article class="nft-card">
+      <span class="nft-badge">Rarible</span>
+      <h3 data-lang="en" class="show">NFT Link</h3>
+      <h3 data-lang="ru">Ссылка на NFT</h3>
+      <p class="muted" data-lang="en">Opens in new tab.</p>
+      <p class="muted" data-lang="ru">Откроется в новой вкладке.</p>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046493" target="_blank" rel="noopener" data-lang="en">Open</a>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046493" target="_blank" rel="noopener" data-lang="ru">Открыть</a>
+    </article>
+    
+    <article class="nft-card">
+      <span class="nft-badge">Rarible</span>
+      <h3 data-lang="en" class="show">NFT Link</h3>
+      <h3 data-lang="ru">Ссылка на NFT</h3>
+      <p class="muted" data-lang="en">Opens in new tab.</p>
+      <p class="muted" data-lang="ru">Откроется в новой вкладке.</p>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046492" target="_blank" rel="noopener" data-lang="en">Open</a>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046492" target="_blank" rel="noopener" data-lang="ru">Открыть</a>
+    </article>
+    
+    <article class="nft-card">
+      <span class="nft-badge">Rarible</span>
+      <h3 data-lang="en" class="show">NFT Link</h3>
+      <h3 data-lang="ru">Ссылка на NFT</h3>
+      <p class="muted" data-lang="en">Opens in new tab.</p>
+      <p class="muted" data-lang="ru">Откроется в новой вкладке.</p>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046491" target="_blank" rel="noopener" data-lang="en">Open</a>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046491" target="_blank" rel="noopener" data-lang="ru">Открыть</a>
+    </article>
+    
+    <article class="nft-card">
+      <span class="nft-badge">Rarible</span>
+      <h3 data-lang="en" class="show">NFT Link</h3>
+      <h3 data-lang="ru">Ссылка на NFT</h3>
+      <p class="muted" data-lang="en">Opens in new tab.</p>
+      <p class="muted" data-lang="ru">Откроется в новой вкладке.</p>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046490" target="_blank" rel="noopener" data-lang="en">Open</a>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046490" target="_blank" rel="noopener" data-lang="ru">Открыть</a>
+    </article>
+    
+    <article class="nft-card">
+      <span class="nft-badge">Rarible</span>
+      <h3 data-lang="en" class="show">NFT Link</h3>
+      <h3 data-lang="ru">Ссылка на NFT</h3>
+      <p class="muted" data-lang="en">Opens in new tab.</p>
+      <p class="muted" data-lang="ru">Откроется в новой вкладке.</p>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046487" target="_blank" rel="noopener" data-lang="en">Open</a>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046487" target="_blank" rel="noopener" data-lang="ru">Открыть</a>
+    </article>
+    
+    <article class="nft-card">
+      <span class="nft-badge">Rarible</span>
+      <h3 data-lang="en" class="show">NFT Link</h3>
+      <h3 data-lang="ru">Ссылка на NFT</h3>
+      <p class="muted" data-lang="en">Opens in new tab.</p>
+      <p class="muted" data-lang="ru">Откроется в новой вкладке.</p>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046481" target="_blank" rel="noopener" data-lang="en">Open</a>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046481" target="_blank" rel="noopener" data-lang="ru">Открыть</a>
+    </article>
+    
+    <article class="nft-card">
+      <span class="nft-badge">Rarible</span>
+      <h3 data-lang="en" class="show">NFT Link</h3>
+      <h3 data-lang="ru">Ссылка на NFT</h3>
+      <p class="muted" data-lang="en">Opens in new tab.</p>
+      <p class="muted" data-lang="ru">Откроется в новой вкладке.</p>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046480" target="_blank" rel="noopener" data-lang="en">Open</a>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046480" target="_blank" rel="noopener" data-lang="ru">Открыть</a>
+    </article>
+    
+    <article class="nft-card">
+      <span class="nft-badge">Rarible</span>
+      <h3 data-lang="en" class="show">NFT Link</h3>
+      <h3 data-lang="ru">Ссылка на NFT</h3>
+      <p class="muted" data-lang="en">Opens in new tab.</p>
+      <p class="muted" data-lang="ru">Откроется в новой вкладке.</p>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046479" target="_blank" rel="noopener" data-lang="en">Open</a>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046479" target="_blank" rel="noopener" data-lang="ru">Открыть</a>
+    </article>
+    
+    <article class="nft-card">
+      <span class="nft-badge">Rarible</span>
+      <h3 data-lang="en" class="show">NFT Link</h3>
+      <h3 data-lang="ru">Ссылка на NFT</h3>
+      <p class="muted" data-lang="en">Opens in new tab.</p>
+      <p class="muted" data-lang="ru">Откроется в новой вкладке.</p>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046469" target="_blank" rel="noopener" data-lang="en">Open</a>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046469" target="_blank" rel="noopener" data-lang="ru">Открыть</a>
+    </article>
+    
+    <article class="nft-card">
+      <span class="nft-badge">Rarible</span>
+      <h3 data-lang="en" class="show">NFT Link</h3>
+      <h3 data-lang="ru">Ссылка на NFT</h3>
+      <p class="muted" data-lang="en">Opens in new tab.</p>
+      <p class="muted" data-lang="ru">Откроется в новой вкладке.</p>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046465" target="_blank" rel="noopener" data-lang="en">Open</a>
+      <a class="btn" href="https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046465" target="_blank" rel="noopener" data-lang="ru">Открыть</a>
+    </article>
+    
+    <article class="nft-card">
+      <span class="nft-badge">Rarible (Polygon)</span>
+      <h3 data-lang="en" class="show">NFT Link</h3>
+      <h3 data-lang="ru">Ссылка на NFT</h3>
+      <p class="muted" data-lang="en">Opens in new tab.</p>
+      <p class="muted" data-lang="ru">Откроется в новой вкладке.</p>
+      <a class="btn" href="https://og.rarible.com/token/polygon/0x35f8aee672cde8e5fd09c93d2bfe4ff5a9cf0756:19223264877338955498166477182825409596884630599573943600177382871287898046476" target="_blank" rel="noopener" data-lang="en">Open</a>
+      <a class="btn" href="https://og.rarible.com/token/polygon/0x35f8aee672cde8e5fd09c93d2bfe4ff5a9cf0756:19223264877338955498166477182825409596884630599573943600177382871287898046476" target="_blank" rel="noopener" data-lang="ru">Открыть</a>
+    </article>
+    
+    <article class="nft-card">
+      <span class="nft-badge">Rarible (Polygon)</span>
+      <h3 data-lang="en" class="show">NFT Link</h3>
+      <h3 data-lang="ru">Ссылка на NFT</h3>
+      <p class="muted" data-lang="en">Opens in new tab.</p>
+      <p class="muted" data-lang="ru">Откроется в новой вкладке.</p>
+      <a class="btn" href="https://og.rarible.com/token/polygon/0x35f8aee672cde8e5fd09c93d2bfe4ff5a9cf0756:19223264877338955498166477182825409596884630599573943600177382871287898046475" target="_blank" rel="noopener" data-lang="en">Open</a>
+      <a class="btn" href="https://og.rarible.com/token/polygon/0x35f8aee672cde8e5fd09c93d2bfe4ff5a9cf0756:19223264877338955498166477182825409596884630599573943600177382871287898046475" target="_blank" rel="noopener" data-lang="ru">Открыть</a>
+    </article>
+    
+    <article class="nft-card">
+      <span class="nft-badge">Rarible (Polygon)</span>
+      <h3 data-lang="en" class="show">NFT Link</h3>
+      <h3 data-lang="ru">Ссылка на NFT</h3>
+      <p class="muted" data-lang="en">Opens in new tab.</p>
+      <p class="muted" data-lang="ru">Откроется в новой вкладке.</p>
+      <a class="btn" href="https://og.rarible.com/token/polygon/0x35f8aee672cde8e5fd09c93d2bfe4ff5a9cf0756:19223264877338955498166477182825409596884630599573943600177382871287898046474" target="_blank" rel="noopener" data-lang="en">Open</a>
+      <a class="btn" href="https://og.rarible.com/token/polygon/0x35f8aee672cde8e5fd09c93d2bfe4ff5a9cf0756:19223264877338955498166477182825409596884630599573943600177382871287898046474" target="_blank" rel="noopener" data-lang="ru">Открыть</a>
+    </article>
+    
+    <article class="nft-card">
+      <span class="nft-badge">Rarible (Polygon)</span>
+      <h3 data-lang="en" class="show">NFT Link</h3>
+      <h3 data-lang="ru">Ссылка на NFT</h3>
+      <p class="muted" data-lang="en">Opens in new tab.</p>
+      <p class="muted" data-lang="ru">Откроется в новой вкладке.</p>
+      <a class="btn" href="https://og.rarible.com/token/polygon/0x35f8aee672cde8e5fd09c93d2bfe4ff5a9cf0756:19223264877338955498166477182825409596884630599573943600177382871287898046472" target="_blank" rel="noopener" data-lang="en">Open</a>
+      <a class="btn" href="https://og.rarible.com/token/polygon/0x35f8aee672cde8e5fd09c93d2bfe4ff5a9cf0756:19223264877338955498166477182825409596884630599573943600177382871287898046472" target="_blank" rel="noopener" data-lang="ru">Открыть</a>
+    </article>
+    
+    <article class="nft-card">
+      <span class="nft-badge">Rarible (Polygon)</span>
+      <h3 data-lang="en" class="show">NFT Link</h3>
+      <h3 data-lang="ru">Ссылка на NFT</h3>
+      <p class="muted" data-lang="en">Opens in new tab.</p>
+      <p class="muted" data-lang="ru">Откроется в новой вкладке.</p>
+      <a class="btn" href="https://og.rarible.com/token/polygon/0x35f8aee672cde8e5fd09c93d2bfe4ff5a9cf0756:19223264877338955498166477182825409596884630599573943600177382871287898046471" target="_blank" rel="noopener" data-lang="en">Open</a>
+      <a class="btn" href="https://og.rarible.com/token/polygon/0x35f8aee672cde8e5fd09c93d2bfe4ff5a9cf0756:19223264877338955498166477182825409596884630599573943600177382871287898046471" target="_blank" rel="noopener" data-lang="ru">Открыть</a>
+    </article>
+    
+    <article class="nft-card">
+      <span class="nft-badge">Rarible (Polygon)</span>
+      <h3 data-lang="en" class="show">NFT Link</h3>
+      <h3 data-lang="ru">Ссылка на NFT</h3>
+      <p class="muted" data-lang="en">Opens in new tab.</p>
+      <p class="muted" data-lang="ru">Откроется в новой вкладке.</p>
+      <a class="btn" href="https://og.rarible.com/token/polygon/0x35f8aee672cde8e5fd09c93d2bfe4ff5a9cf0756:19223264877338955498166477182825409596884630599573943600177382871287898046470" target="_blank" rel="noopener" data-lang="en">Open</a>
+      <a class="btn" href="https://og.rarible.com/token/polygon/0x35f8aee672cde8e5fd09c93d2bfe4ff5a9cf0756:19223264877338955498166477182825409596884630599573943600177382871287898046470" target="_blank" rel="noopener" data-lang="ru">Открыть</a>
+    </article>
+    </div>
+</main>
+<footer class="footer">© <span id="y"></span> Soul in PsyAbstract — Marina</footer>
+<script src="assets/js/app.js?v=10"></script>
+<script>
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;s1.src='https://embed.tawk.to/68d8492a9c33dd1951ed7462/10f28c0ca16271a8adbbb92f60ae12d723673509';
+s1.charset='UTF-8';s1.setAttribute('crossorigin','*');s0.parentNode.insertBefore(s1,s0);})();
+</script>
 </body>
 </html>
+

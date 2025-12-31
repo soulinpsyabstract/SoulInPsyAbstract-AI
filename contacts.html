@@ -1,54 +1,95 @@
 <!doctype html>
-<html lang="ru" data-lang="ru">
+<html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Контакты · Soul in PsyAbstract</title>
-  <meta name="theme-color" content="#0b0d10">
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="assets/css/fonts.css">
-  <link rel="stylesheet" href="assets/css/main.css">
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Contacts — Soul in PsyAbstract</title>
+  <meta name="description" content="Contacts: WhatsApp, Telegram, Instagram, TikTok, NFT links, site, email, phone. QR codes."/>
+  <link rel="canonical" href="https://soulinpsyabstract.42web.io/contacts.html"/>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png"/>
+  <link rel="stylesheet" href="assets/css/fonts.css?v=10"/>
+  <link rel="stylesheet" href="assets/css/main.css?v=10"/>
+  <style>
+    .btns{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+    .qrgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+    .qr{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px;text-align:center}
+    .qr img{max-width:100%;height:auto;border-radius:12px;border:1px solid var(--line)}
+  </style>
 </head>
 <body>
-  <div class="wrap">
-    <header class="topbar">
-      <div class="brand">
-        <div class="title">SoulInPsyAbstract AI</div>
-        <div class="sub">SIPA · pages connected · no 404 drama</div>
-      </div>
-      
-      <nav class="nav">
-        <a href="index.html" data-i18n="nav.home">Главная</a>
-        <a href="gallery.html" data-i18n="nav.gallery">Галерея</a>
-        <a href="nft.html" data-i18n="nav.nft">NFT</a>
-        <a href="manifest.html" data-i18n="nav.manifest">Манифест</a>
-        <a href="poems.html" data-i18n="nav.poems">Стихи</a>
-        <a href="songs.html" data-i18n="nav.songs">Песни</a>
-        <a href="faq.html" data-i18n="nav.faq">FAQ</a>
-        <a href="contacts.html" data-i18n="nav.contacts">Контакты</a>
-        <a href="ai.html" data-i18n="nav.ai">AI</a>
-      </nav>
-    
-      <button class="btn" id="lang-toggle">RU</button>
-    </header>
-
-    <main class="card">
-      <h1 class="h1" data-i18n="nav.contacts">Контакты</h1>
-      <p class="p">Контакты берёшь из config. Пока базово:</p>
-<ul class="p">
-  <li><a href="mailto:soulinpsyabstract@gmail.com">soulinpsyabstract@gmail.com</a></li>
-  <li><a href="https://www.instagram.com/soul.in.psyabstract" target="_blank" rel="noopener">Instagram</a></li>
-  <li><a href="https://wa.me/972525074743" target="_blank" rel="noopener">WhatsApp</a></li>
-  <li><a href="https://t.me/messycketch" target="_blank" rel="noopener">Telegram</a></li>
-</ul>
-    </main>
-
-    <footer class="card">
-      <div class="p">Aelin AquaSoul Art Creator · Soul In PsyAbstract</div>
-    </footer>
+<nav class="nav">
+  <a class="brand" href="index.html"><span class="logo"></span><span>Soul in PsyAbstract</span></a>
+  <div class="menu">
+    <a href="index.html">Home</a><a href="gallery.html">Gallery</a><a href="nft.html">NFT</a>
+    <a href="manifest.html">Manifest</a><a href="poems.html">Poems</a><a href="songs.html">Songs</a>
+    <a href="faq.html">FAQ</a><a class="active" href="contacts.html">Contacts</a><a href="blog.html">News</a>
   </div>
+  <div class="lang"><button class="btn" id="lang-en">EN</button><button class="btn" id="lang-ru">RU</button></div>
+</nav>
 
-  <script src="assets/js/pwa.js" defer></script>
-  <script src="assets/js/core.js" defer></script>
+<main class="wrap">
+  <!-- RU -->
+  <section data-lang="ru" class="show">
+    <h1>Связь / Контакты</h1>
+    <p class="subtitle">Всегда на связи. Выберите удобный способ.</p>
+    <div class="btns">
+      <a class="btn wa" href="https://wa.me/972525074743" target="_blank" rel="noopener">💬 WhatsApp чат</a>
+      <a class="btn wa" href="https://wa.me/c/972525074743" target="_blank" rel="noopener">🛍 Каталог в WhatsApp</a>
+      <a class="btn wa" href="https://wa.me/p/24479478801689836/972525074743" target="_blank" rel="noopener">🔎 Товар в WhatsApp</a>
+
+      <a class="btn tg" href="https://t.me/messysketch" target="_blank" rel="noopener">📢 Telegram группа</a>
+      <a class="btn tg" href="https://t.me/SoulInPsyAbstract" target="_blank" rel="noopener">👤 Telegram канал</a>
+
+      <a class="btn ig" href="https://instagram.com/soul.in.psyabstract" target="_blank" rel="noopener">📸 Instagram</a>
+      <a class="btn tt" href="https://tiktok.com/@soulinpsyabstract" target="_blank" rel="noopener">🎵 TikTok</a>
+
+      <a class="btn nft" href="https://zora.co/@soulinpsyabstract" target="_blank" rel="noopener">⚡ Zora</a>
+      <a class="btn nft" href="https://og.rarible.com/soulinpsyabstract" target="_blank" rel="noopener">💎 Rarible</a>
+
+      <a class="btn site" href="https://SoulInPsyAbstract.art" target="_blank" rel="noopener">🌐 SoulInPsyAbstract.art</a>
+      <a class="btn mail" href="mailto:soulinpsyabstract@gmail.com">📧 soulinpsyabstract@gmail.com</a>
+      <a class="btn phone" href="tel:+972525074743">📱 +972 52&nbsp;507&nbsp;4743</a>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <div class="qrgrid">
+        <div class="qr"><img src="assets/img/qr_instagram.jpg" alt="Instagram QR"><div>Instagram<br><small>@soul.in.psyabstract</small></div></div>
+        <div class="qr"><img src="assets/img/qr_threads.jpg" alt="Threads QR"><div>Threads<br><small>@soul.in.psyabstract</small></div></div>
+        <div class="qr"><img src="assets/img/qr_tiktok.jpg" alt="TikTok QR"><div>TikTok<br><small>@soulinpsyabstract</small></div></div>
+        <div class="qr"><img src="assets/img/qr_telegram_group.jpg" alt="Telegram Group QR"><div>Telegram (группа)<br><small>@messysketch</small></div></div>
+        <div class="qr"><img src="assets/img/qr_telegram_channel.jpg" alt="Telegram Channel QR"><div>Telegram (канал)<br><small>@SoulInPsyAbstract</small></div></div>
+        <div class="qr"><img src="assets/img/qr_whatsapp.jpg" alt="WhatsApp QR"><div>WhatsApp<br><small>+972 52-507-4743</small></div></div>
+        <div class="qr"><img src="assets/img/qr_zora.jpg" alt="Zora QR"><div>Zora<br><small>zora.co/@soulinpsyabstract</small></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EN -->
+  <section data-lang="en">
+    <h1>Contacts</h1>
+    <p class="subtitle">Quick links & QR below.</p>
+    <div class="btns">
+      <a class="btn" href="https://wa.me/972525074743" target="_blank" rel="noopener">💬 WhatsApp chat</a>
+      <a class="btn" href="https://t.me/messysketch" target="_blank" rel="noopener">📢 Telegram group</a>
+      <a class="btn" href="https://t.me/SoulInPsyAbstract" target="_blank" rel="noopener">👤 Telegram channel</a>
+      <a class="btn" href="https://instagram.com/soul.in.psyabstract" target="_blank" rel="noopener">📸 Instagram</a>
+      <a class="btn" href="https://tiktok.com/@soulinpsyabstract" target="_blank" rel="noopener">🎵 TikTok</a>
+      <a class="btn" href="https://zora.co/@soulinpsyabstract" target="_blank" rel="noopener">⚡ Zora</a>
+      <a class="btn" href="https://og.rarible.com/soulinpsyabstract" target="_blank" rel="noopener">💎 Rarible</a>
+      <a class="btn" href="https://SoulInPsyAbstract.art" target="_blank" rel="noopener">🌐 SoulInPsyAbstract.art</a>
+      <a class="btn" href="mailto:soulinpsyabstract@gmail.com">📧 Email</a>
+      <a class="btn" href="tel:+972525074743">📱 +972 52&nbsp;507&nbsp;4743</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">© <span id="y"></span> Soul in PsyAbstract — Marina</footer>
+
+<script src="assets/js/app.js?v=10"></script>
+<script>
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;s1.src='https://embed.tawk.to/68d8492a9c33dd1951ed7462/10f28c0ca16271a8adbbb92f60ae12d723673509';
+s1.charset='UTF-8';s1.setAttribute('crossorigin','*');s0.parentNode.insertBefore(s1,s0);})();
+</script>
 </body>
 </html>
