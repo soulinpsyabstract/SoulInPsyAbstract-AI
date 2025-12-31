@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>SoulInPsyAbstract AI · SIPA AI</title>
+<link rel="manifest" href="/manifest.webmanifest">
+<style>
+body{margin:0;background:#050709;color:#c7ecff;font-family:sans-serif}
+.ai{padding:16px}
+textarea{width:100%;min-height:120px}
+button{margin-top:8px}
+.err{color:#ff6b6b}
+</style>
+</head>
+<body>
+<section class="ai">
+<h1>SIPA AI</h1>
+<textarea id="msg" placeholder="Напиши…"></textarea>
+<button id="send">Send</button>
+<pre id="out"></pre>
+<div id="err" class="err"></div>
+</section>
+<script>
+send.onclick=async()=>{
+err.textContent='';out.textContent='';
+try{
+const r=await fetch('/api',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:msg.value})});
+if(!r.ok)throw new Error();
+out.textContent=JSON.stringify(await r.json(),null,2);
+}catch(e){err.textContent='Ошибка соединения';}
+};
+</script>
+</body>
+</html>

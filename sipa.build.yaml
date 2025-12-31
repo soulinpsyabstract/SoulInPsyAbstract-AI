@@ -1,0 +1,2 @@
+build: static
+worker: worker/worker.js
