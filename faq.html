@@ -1,49 +1,55 @@
 <!doctype html>
-<html lang="ru" class="js">
+<html lang="en">
 <head>
-  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>FAQ — Soul in PsyAbstract</title>
-  <meta name="description" content="Оплата, доставка, эксклюзив, NFT."/>
-  <link rel="canonical" href="https://soulinpsyabstract.42web.io/faq.html"/>
-  <meta property="og:type" content="website"><meta property="og:title" content="FAQ — Soul in PsyAbstract">
-  <meta property="og:image" content="https://soulinpsyabstract.42web.io/assets/img/og_cover.jpg">
-  <meta property="og:url" content="https://soulinpsyabstract.42web.io/faq.html">
-  <link rel="icon" href="assets/img/favicon.png">
-  <link rel="stylesheet" href="assets/css/fonts.css"><link rel="stylesheet" href="assets/css/main.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Оплата","acceptedAnswer":{"@type":"Answer","text":"PayPal Fast, PayPal.me; ETH кошелёк поддерживается."}},{"@type":"Question","name":"Доставка","acceptedAnswer":{"@type":"Answer","text":"База 200₪, регионы +150/+200/+300 USD для международных."}}]}</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>FAQ · Soul In PsyAbstract</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#0a0d10">
 </head>
-<body>
-<nav class="nav">
-  <a class="brand" href="index.html"><span class="logo"></span><span>Soul in PsyAbstract</span></a>
-  <div class="menu">
-    <a href="gallery.html">Gallery</a>
-    <a href="nft.html">NFT</a>
-    <a href="manifest.html">Manifest</a>
-    <a href="poems.html">Poems</a>
-    <a href="songs.html">Songs</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contacts.html">Contacts</a>
-    <a href="ai.html">AI</a>
-  </div>
-  <div class="lang"><button class="btn langbtn" data-lang="en">EN</button><button class="btn langbtn" data-lang="ru">RU</button></div>
-</nav>
-<main class="wrap two">
-  <section class="card lang-content active" data-lang="ru">
-    <h1>FAQ</h1>
-    <details><summary>Форматы и размеры</summary><p>А3, А4 и под заказ.</p></details>
-    <details><summary>Оплата</summary><p>PayPal Fast/PayPal.me; ETH (<code>0x2a7f...4073</code>).</p></details>
-    <details><summary>Доставка</summary><p>Почта/курьер. База 200₪; международная +150/+200/+300 USD.</p></details>
-    <details><summary>Эксклюзив</summary><p>+200 USD к оригиналу.</p></details>
-  </section>
-  <section class="card lang-content" data-lang="en">
-    <h1>FAQ</h1>
-    <details><summary>Formats & sizes</summary><p>A3, A4, custom.</p></details>
-    <details><summary>Payment</summary><p>PayPal Fast / PayPal.me; ETH supported.</p></details>
-    <details><summary>Shipping</summary><p>Base 200₪; International +150/+200/+300 USD.</p></details>
-    <details><summary>Exclusive</summary><p>+200 USD to original.</p></details>
-  </section>
-</main>
-<footer class="footer">© <span id="y"></span> Soul in PsyAbstract</footer>
-<script src="assets/js/app.js"></script>
+<body data-page="faq">
+  <header class="header">
+    <div class="wrap">
+      <div class="brand">
+        <div>
+          <h1>Soul In PsyAbstract</h1>
+          <div class="tag">SIPA · pages connected · no 404 drama</div>
+          <div class="small" id="hero-rotator"></div>
+        </div>
+        <div class="tools">
+          <button class="btn" id="lang-toggle">RU</button>
+          <button class="btn" id="kid-toggle">Ребёнок: OFF</button>
+        </div>
+      </div>
+      
+    <nav class="nav">
+      <a class="pill" href="index.html">Home</a>
+      <a class="pill" href="gallery.html">Gallery</a>
+      <a class="pill" href="nft.html">NFT</a>
+      <a class="pill" href="manifest.html">Manifest</a>
+      <a class="pill" href="poems.html">Poems</a>
+      <a class="pill" href="songs.html">Songs</a>
+      <a class="pill" href="faq.html">FAQ</a>
+      <a class="pill" href="contacts.html">Contacts</a>
+      <a class="pill" href="ai.html">AI</a>
+    </nav>
+    
+    </div>
+  </header>
+  <main class="wrap">
+    <div id="fatal" class="small"></div>
+    
+<section class="card">
+  <h2>FAQ</h2>
+  <div id="faq-list"></div>
+</section>
+
+    <div class="footer">Aelin AquaSoul · Soul In PsyAbstract · “In the moment of panic, she still does the right thing.”</div>
+  </main>
+  <script src="assets/js/app.js"></script>
+  <script>
+    if('serviceWorker' in navigator) navigator.serviceWorker.register('service-worker.js').catch(()=>{});
+  </script>
 </body>
 </html>

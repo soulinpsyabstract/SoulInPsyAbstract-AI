@@ -56,6 +56,7 @@
     if(page==="poems") await renderText("poems");
     if(page==="manifest") await renderText("manifest");
     if(page==="faq") await renderFAQ();
+  if(page==="kid") await renderKid();
     if(page==="contacts") await renderContacts();
     if(page==="ai") await renderAI();
   }
@@ -157,6 +158,35 @@
       wrap.appendChild(row);
     });
   }
+
+async function renderKid(){
+  const root = qs("#kid-root");
+  if(!root) return;
+  const data = await loadJSON("assets/data/kid.json", { sections: [] });
+  const lang = state.lang || "en";
+  const title = lang==="ru" ? (data.title_ru || "Ребёнок") : (data.title_en || "Kid");
+  const intro = lang==="ru" ? (data.intro_ru || "") : (data.intro_en || "");
+  root.innerHTML = `
+    <section class="card">
+      <h2 class="h2">${escapeHTML(title)}</h2>
+      ${intro ? `<p class="muted">${escapeHTML(intro)}</p>` : ""}
+    </section>
+  `;
+
+  (data.sections||[]).forEach(sec=>{
+    const h = lang==="ru" ? (sec.h_ru||sec.h_en||"") : (sec.h_en||sec.h_ru||"");
+    const p = lang==="ru" ? (sec.p_ru||sec.p_en||"") : (sec.p_en||sec.p_ru||"");
+    const items = (lang==="ru" ? (sec.items_ru||sec.items_en||[]) : (sec.items_en||sec.items_ru||[])) || [];
+    const el = document.createElement("section");
+    el.className = "card";
+    el.innerHTML = `
+      ${h ? `<h3 class="h3">${escapeHTML(h)}</h3>` : ""}
+      ${p ? `<p>${escapeHTML(p)}</p>` : ""}
+      ${items.length ? `<ul class="list">${items.map(x=>`<li>${escapeHTML(String(x))}</li>`).join("")}</ul>` : ""}
+    `;
+    root.appendChild(el);
+  });
+}
 
   async function renderContacts(){
     const wrap=$("#contacts-root");

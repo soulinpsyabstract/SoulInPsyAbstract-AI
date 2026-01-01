@@ -1,4 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NFT · Soul In PsyAbstract</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#0a0d10">
+</head>
+<body data-page="nft">
+  <header class="header">
+    <div class="wrap">
+      <div class="brand">
+        <div>
+          <h1>Soul In PsyAbstract</h1>
+          <div class="tag">SIPA · pages connected · no 404 drama</div>
+          <div class="small" id="hero-rotator"></div>
+        </div>
+        <div class="tools">
+          <button class="btn" id="lang-toggle">RU</button>
+          <button class="btn" id="kid-toggle">Ребёнок: OFF</button>
+        </div>
+      </div>
+      
+    <nav class="nav">
+      <a class="pill" href="index.html">Home</a>
+      <a class="pill" href="gallery.html">Gallery</a>
+      <a class="pill" href="nft.html">NFT</a>
+      <a class="pill" href="manifest.html">Manifest</a>
+      <a class="pill" href="poems.html">Poems</a>
+      <a class="pill" href="songs.html">Songs</a>
+      <a class="pill" href="faq.html">FAQ</a>
+      <a class="pill" href="contacts.html">Contacts</a>
+      <a class="pill" href="ai.html">AI</a>
+    </nav>
+    
+    </div>
+  </header>
+  <main class="wrap">
+    <div id="fatal" class="small"></div>
+    
+<section class="card">
+  <h2>NFT</h2>
+  <div class="small">Collections and marketplaces. Paste your real links in <code>assets/data/nft.json</code>.</div>
+</section>
+<section class="card" id="nft-list"></section>
 
-<h2>NFT</h2>
-<ul id="nfts"></ul>
-<script src="assets/js/app.js"></script>
+    <div class="footer">Aelin AquaSoul · Soul In PsyAbstract · “In the moment of panic, she still does the right thing.”</div>
+  </main>
+  <script src="assets/js/app.js"></script>
+  <script>
+    if('serviceWorker' in navigator) navigator.serviceWorker.register('service-worker.js').catch(()=>{});
+  </script>
+</body>
+</html>

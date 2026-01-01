@@ -1,0 +1,56 @@
+{
+  "title_en": "Kid mode",
+  "title_ru": "Режим ребёнка",
+  "intro_en": "Soft entry. No doctrine. Just safe, simple, kind. (Adults can go back to the main pages.)",
+  "intro_ru": "Мягкий вход. Без доктрины. Просто безопасно, просто, тепло. (Взрослые могут вернуться на основные страницы.)",
+  "sections": [
+    {
+      "h_en": "What is this site?",
+      "h_ru": "Что это за сайт?",
+      "p_en": "Art made from lines, hearts and honest chaos. You can look at pictures, read poems, and listen to songs.",
+      "p_ru": "Искусство из линий, сердечек и честного хаоса. Тут можно смотреть картинки, читать стихи и слушать песни.",
+      "items_en": [
+        "Gallery: pictures",
+        "Poems: words",
+        "Songs: music",
+        "NFT: links for grown-ups"
+      ],
+      "items_ru": [
+        "Gallery: картинки",
+        "Poems: стихи",
+        "Songs: музыка",
+        "NFT: ссылки для взрослых"
+      ]
+    },
+    {
+      "h_en": "Rule of safety",
+      "h_ru": "Правило безопасности",
+      "p_en": "If something feels scary, stop and go to Contacts. Real humans answer there.",
+      "p_ru": "Если что-то пугает или странно, остановись и открой Contacts. Там отвечают живые люди.",
+      "items_en": [
+        "No personal data in comments.",
+        "If you are under 18, ask an adult before buying anything."
+      ],
+      "items_ru": [
+        "Не оставляй личные данные в комментариях.",
+        "Если тебе нет 18, спроси взрослого перед покупкой чего-либо."
+      ]
+    },
+    {
+      "h_en": "How to enjoy it",
+      "h_ru": "Как кайфовать правильно",
+      "p_en": "Pick one thing: one page, one mood. No need to scroll forever like a zombie.",
+      "p_ru": "Выбери одно: одну страницу, одно настроение. Не надо скроллить бесконечно как зомби.",
+      "items_en": [
+        "Start with Gallery.",
+        "Then Poems.",
+        "Then Songs."
+      ],
+      "items_ru": [
+        "Начни с Gallery.",
+        "Потом Poems.",
+        "Потом Songs."
+      ]
+    }
+  ]
+}
