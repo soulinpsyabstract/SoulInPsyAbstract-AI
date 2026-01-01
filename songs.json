@@ -1,1 +1,20 @@
-[{"title":"rising after every fall"}]
+{
+  "items": [
+    {
+      "id": "SONG-01",
+      "title_en": "PsyAbstract Pulse",
+      "title_ru": "Пульс PsyAbstract",
+      "url": "",
+      "note_en": "Add audio URL",
+      "note_ru": "Добавь ссылку на аудио"
+    },
+    {
+      "id": "SONG-02",
+      "title_en": "Neon Ocean",
+      "title_ru": "Неоновый океан",
+      "url": "",
+      "note_en": "Add audio URL",
+      "note_ru": "Добавь ссылку на аудио"
+    }
+  ]
+}

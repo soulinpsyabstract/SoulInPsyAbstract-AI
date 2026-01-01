@@ -1,0 +1,22 @@
+{
+  "collections": [
+    {
+      "name": "Zora",
+      "url": "",
+      "note_en": "Paste your Zora collection link",
+      "note_ru": "Вставь ссылку на коллекцию Zora"
+    },
+    {
+      "name": "Rarible",
+      "url": "",
+      "note_en": "Paste your Rarible link",
+      "note_ru": "Вставь ссылку Rarible"
+    },
+    {
+      "name": "OpenSea",
+      "url": "",
+      "note_en": "Paste your OpenSea link",
+      "note_ru": "Вставь ссылку OpenSea"
+    }
+  ]
+}

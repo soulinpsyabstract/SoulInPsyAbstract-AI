@@ -1,1 +1,850 @@
-[{"title":"PsyAbstract Study Artwork 01"}]
+{
+  "items": [
+    {
+      "id": "ART-01",
+      "title_en": "PsyAbstract Work 01",
+      "title_ru": "PsyAbstract Работа 01",
+      "img": "assets/img/01.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-01"
+    },
+    {
+      "id": "ART-02",
+      "title_en": "PsyAbstract Work 02",
+      "title_ru": "PsyAbstract Работа 02",
+      "img": "assets/img/02.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-02"
+    },
+    {
+      "id": "ART-03",
+      "title_en": "PsyAbstract Work 03",
+      "title_ru": "PsyAbstract Работа 03",
+      "img": "assets/img/03.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-03"
+    },
+    {
+      "id": "ART-04",
+      "title_en": "PsyAbstract Work 04",
+      "title_ru": "PsyAbstract Работа 04",
+      "img": "assets/img/04.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-04"
+    },
+    {
+      "id": "ART-05",
+      "title_en": "PsyAbstract Work 05",
+      "title_ru": "PsyAbstract Работа 05",
+      "img": "assets/img/05.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-05"
+    },
+    {
+      "id": "ART-06",
+      "title_en": "PsyAbstract Work 06",
+      "title_ru": "PsyAbstract Работа 06",
+      "img": "assets/img/06.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-06"
+    },
+    {
+      "id": "ART-07",
+      "title_en": "PsyAbstract Work 07",
+      "title_ru": "PsyAbstract Работа 07",
+      "img": "assets/img/07.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-07"
+    },
+    {
+      "id": "ART-08",
+      "title_en": "PsyAbstract Work 08",
+      "title_ru": "PsyAbstract Работа 08",
+      "img": "assets/img/08.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-08"
+    },
+    {
+      "id": "ART-09",
+      "title_en": "PsyAbstract Work 09",
+      "title_ru": "PsyAbstract Работа 09",
+      "img": "assets/img/09.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-09"
+    },
+    {
+      "id": "ART-10",
+      "title_en": "PsyAbstract Work 10",
+      "title_ru": "PsyAbstract Работа 10",
+      "img": "assets/img/10.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-10"
+    },
+    {
+      "id": "ART-11",
+      "title_en": "PsyAbstract Work 11",
+      "title_ru": "PsyAbstract Работа 11",
+      "img": "assets/img/11.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-11"
+    },
+    {
+      "id": "ART-12",
+      "title_en": "PsyAbstract Work 12",
+      "title_ru": "PsyAbstract Работа 12",
+      "img": "assets/img/12.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-12"
+    },
+    {
+      "id": "ART-13",
+      "title_en": "PsyAbstract Work 13",
+      "title_ru": "PsyAbstract Работа 13",
+      "img": "assets/img/13.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-13"
+    },
+    {
+      "id": "ART-14",
+      "title_en": "PsyAbstract Work 14",
+      "title_ru": "PsyAbstract Работа 14",
+      "img": "assets/img/14.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-14"
+    },
+    {
+      "id": "ART-15",
+      "title_en": "PsyAbstract Work 15",
+      "title_ru": "PsyAbstract Работа 15",
+      "img": "assets/img/15.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-15"
+    },
+    {
+      "id": "ART-16",
+      "title_en": "PsyAbstract Work 16",
+      "title_ru": "PsyAbstract Работа 16",
+      "img": "assets/img/16.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-16"
+    },
+    {
+      "id": "ART-17",
+      "title_en": "PsyAbstract Work 17",
+      "title_ru": "PsyAbstract Работа 17",
+      "img": "assets/img/17.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-17"
+    },
+    {
+      "id": "ART-18",
+      "title_en": "PsyAbstract Work 18",
+      "title_ru": "PsyAbstract Работа 18",
+      "img": "assets/img/18.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-18"
+    },
+    {
+      "id": "ART-19",
+      "title_en": "PsyAbstract Work 19",
+      "title_ru": "PsyAbstract Работа 19",
+      "img": "assets/img/19.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-19"
+    },
+    {
+      "id": "ART-20",
+      "title_en": "PsyAbstract Work 20",
+      "title_ru": "PsyAbstract Работа 20",
+      "img": "assets/img/20.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-20"
+    },
+    {
+      "id": "ART-21",
+      "title_en": "PsyAbstract Work 21",
+      "title_ru": "PsyAbstract Работа 21",
+      "img": "assets/img/21.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-21"
+    },
+    {
+      "id": "ART-22",
+      "title_en": "PsyAbstract Work 22",
+      "title_ru": "PsyAbstract Работа 22",
+      "img": "assets/img/22.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-22"
+    },
+    {
+      "id": "ART-23",
+      "title_en": "PsyAbstract Work 23",
+      "title_ru": "PsyAbstract Работа 23",
+      "img": "assets/img/23.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-23"
+    },
+    {
+      "id": "ART-24",
+      "title_en": "PsyAbstract Work 24",
+      "title_ru": "PsyAbstract Работа 24",
+      "img": "assets/img/24.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-24"
+    },
+    {
+      "id": "ART-25",
+      "title_en": "PsyAbstract Work 25",
+      "title_ru": "PsyAbstract Работа 25",
+      "img": "assets/img/25.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-25"
+    },
+    {
+      "id": "ART-26",
+      "title_en": "PsyAbstract Work 26",
+      "title_ru": "PsyAbstract Работа 26",
+      "img": "assets/img/26.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-26"
+    },
+    {
+      "id": "ART-27",
+      "title_en": "PsyAbstract Work 27",
+      "title_ru": "PsyAbstract Работа 27",
+      "img": "assets/img/27.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-27"
+    },
+    {
+      "id": "ART-28",
+      "title_en": "PsyAbstract Work 28",
+      "title_ru": "PsyAbstract Работа 28",
+      "img": "assets/img/28.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-28"
+    },
+    {
+      "id": "ART-29",
+      "title_en": "PsyAbstract Work 29",
+      "title_ru": "PsyAbstract Работа 29",
+      "img": "assets/img/29.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-29"
+    },
+    {
+      "id": "ART-30",
+      "title_en": "PsyAbstract Work 30",
+      "title_ru": "PsyAbstract Работа 30",
+      "img": "assets/img/30.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-30"
+    },
+    {
+      "id": "ART-31",
+      "title_en": "PsyAbstract Work 31",
+      "title_ru": "PsyAbstract Работа 31",
+      "img": "assets/img/31.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-31"
+    },
+    {
+      "id": "ART-32",
+      "title_en": "PsyAbstract Work 32",
+      "title_ru": "PsyAbstract Работа 32",
+      "img": "assets/img/32.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-32"
+    },
+    {
+      "id": "ART-33",
+      "title_en": "PsyAbstract Work 33",
+      "title_ru": "PsyAbstract Работа 33",
+      "img": "assets/img/33.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-33"
+    },
+    {
+      "id": "ART-34",
+      "title_en": "PsyAbstract Work 34",
+      "title_ru": "PsyAbstract Работа 34",
+      "img": "assets/img/34.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-34"
+    },
+    {
+      "id": "ART-35",
+      "title_en": "PsyAbstract Work 35",
+      "title_ru": "PsyAbstract Работа 35",
+      "img": "assets/img/35.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-35"
+    },
+    {
+      "id": "ART-36",
+      "title_en": "PsyAbstract Work 36",
+      "title_ru": "PsyAbstract Работа 36",
+      "img": "assets/img/36.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-36"
+    },
+    {
+      "id": "ART-37",
+      "title_en": "PsyAbstract Work 37",
+      "title_ru": "PsyAbstract Работа 37",
+      "img": "assets/img/37.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-37"
+    },
+    {
+      "id": "ART-38",
+      "title_en": "PsyAbstract Work 38",
+      "title_ru": "PsyAbstract Работа 38",
+      "img": "assets/img/38.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-38"
+    },
+    {
+      "id": "ART-39",
+      "title_en": "PsyAbstract Work 39",
+      "title_ru": "PsyAbstract Работа 39",
+      "img": "assets/img/39.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-39"
+    },
+    {
+      "id": "ART-40",
+      "title_en": "PsyAbstract Work 40",
+      "title_ru": "PsyAbstract Работа 40",
+      "img": "assets/img/40.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-40"
+    },
+    {
+      "id": "ART-41",
+      "title_en": "PsyAbstract Work 41",
+      "title_ru": "PsyAbstract Работа 41",
+      "img": "assets/img/41.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-41"
+    },
+    {
+      "id": "ART-42",
+      "title_en": "PsyAbstract Work 42",
+      "title_ru": "PsyAbstract Работа 42",
+      "img": "assets/img/42.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-42"
+    },
+    {
+      "id": "ART-43",
+      "title_en": "PsyAbstract Work 43",
+      "title_ru": "PsyAbstract Работа 43",
+      "img": "assets/img/43.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-43"
+    },
+    {
+      "id": "ART-44",
+      "title_en": "PsyAbstract Work 44",
+      "title_ru": "PsyAbstract Работа 44",
+      "img": "assets/img/44.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-44"
+    },
+    {
+      "id": "ART-45",
+      "title_en": "PsyAbstract Work 45",
+      "title_ru": "PsyAbstract Работа 45",
+      "img": "assets/img/45.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-45"
+    },
+    {
+      "id": "ART-46",
+      "title_en": "PsyAbstract Work 46",
+      "title_ru": "PsyAbstract Работа 46",
+      "img": "assets/img/46.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-46"
+    },
+    {
+      "id": "ART-47",
+      "title_en": "PsyAbstract Work 47",
+      "title_ru": "PsyAbstract Работа 47",
+      "img": "assets/img/47.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-47"
+    },
+    {
+      "id": "ART-48",
+      "title_en": "PsyAbstract Work 48",
+      "title_ru": "PsyAbstract Работа 48",
+      "img": "assets/img/48.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-48"
+    },
+    {
+      "id": "ART-49",
+      "title_en": "PsyAbstract Work 49",
+      "title_ru": "PsyAbstract Работа 49",
+      "img": "assets/img/49.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-49"
+    },
+    {
+      "id": "ART-50",
+      "title_en": "PsyAbstract Work 50",
+      "title_ru": "PsyAbstract Работа 50",
+      "img": "assets/img/50.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-50"
+    },
+    {
+      "id": "ART-51",
+      "title_en": "PsyAbstract Work 51",
+      "title_ru": "PsyAbstract Работа 51",
+      "img": "assets/img/51.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-51"
+    },
+    {
+      "id": "ART-52",
+      "title_en": "PsyAbstract Work 52",
+      "title_ru": "PsyAbstract Работа 52",
+      "img": "assets/img/52.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-52"
+    },
+    {
+      "id": "ART-53",
+      "title_en": "PsyAbstract Work 53",
+      "title_ru": "PsyAbstract Работа 53",
+      "img": "assets/img/53.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-53"
+    },
+    {
+      "id": "ART-54",
+      "title_en": "PsyAbstract Work 54",
+      "title_ru": "PsyAbstract Работа 54",
+      "img": "assets/img/54.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-54"
+    },
+    {
+      "id": "ART-55",
+      "title_en": "PsyAbstract Work 55",
+      "title_ru": "PsyAbstract Работа 55",
+      "img": "assets/img/55.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-55"
+    },
+    {
+      "id": "ART-56",
+      "title_en": "PsyAbstract Work 56",
+      "title_ru": "PsyAbstract Работа 56",
+      "img": "assets/img/56.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-56"
+    },
+    {
+      "id": "ART-57",
+      "title_en": "PsyAbstract Work 57",
+      "title_ru": "PsyAbstract Работа 57",
+      "img": "assets/img/57.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-57"
+    },
+    {
+      "id": "ART-58",
+      "title_en": "PsyAbstract Work 58",
+      "title_ru": "PsyAbstract Работа 58",
+      "img": "assets/img/58.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-58"
+    },
+    {
+      "id": "ART-59",
+      "title_en": "PsyAbstract Work 59",
+      "title_ru": "PsyAbstract Работа 59",
+      "img": "assets/img/59.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-59"
+    },
+    {
+      "id": "ART-60",
+      "title_en": "PsyAbstract Work 60",
+      "title_ru": "PsyAbstract Работа 60",
+      "img": "assets/img/60.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-60"
+    },
+    {
+      "id": "ART-61",
+      "title_en": "PsyAbstract Work 61",
+      "title_ru": "PsyAbstract Работа 61",
+      "img": "assets/img/61.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-61"
+    },
+    {
+      "id": "ART-62",
+      "title_en": "PsyAbstract Work 62",
+      "title_ru": "PsyAbstract Работа 62",
+      "img": "assets/img/62.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-62"
+    },
+    {
+      "id": "ART-63",
+      "title_en": "PsyAbstract Work 63",
+      "title_ru": "PsyAbstract Работа 63",
+      "img": "assets/img/63.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-63"
+    },
+    {
+      "id": "ART-64",
+      "title_en": "PsyAbstract Work 64",
+      "title_ru": "PsyAbstract Работа 64",
+      "img": "assets/img/64.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-64"
+    },
+    {
+      "id": "ART-65",
+      "title_en": "PsyAbstract Work 65",
+      "title_ru": "PsyAbstract Работа 65",
+      "img": "assets/img/65.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-65"
+    },
+    {
+      "id": "ART-66",
+      "title_en": "PsyAbstract Work 66",
+      "title_ru": "PsyAbstract Работа 66",
+      "img": "assets/img/66.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-66"
+    },
+    {
+      "id": "ART-67",
+      "title_en": "PsyAbstract Work 67",
+      "title_ru": "PsyAbstract Работа 67",
+      "img": "assets/img/67.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-67"
+    },
+    {
+      "id": "ART-68",
+      "title_en": "PsyAbstract Work 68",
+      "title_ru": "PsyAbstract Работа 68",
+      "img": "assets/img/68.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-68"
+    },
+    {
+      "id": "ART-69",
+      "title_en": "PsyAbstract Work 69",
+      "title_ru": "PsyAbstract Работа 69",
+      "img": "assets/img/69.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-69"
+    },
+    {
+      "id": "ART-70",
+      "title_en": "PsyAbstract Work 70",
+      "title_ru": "PsyAbstract Работа 70",
+      "img": "assets/img/70.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-70"
+    },
+    {
+      "id": "ART-71",
+      "title_en": "PsyAbstract Work 71",
+      "title_ru": "PsyAbstract Работа 71",
+      "img": "assets/img/71.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-71"
+    },
+    {
+      "id": "ART-72",
+      "title_en": "PsyAbstract Work 72",
+      "title_ru": "PsyAbstract Работа 72",
+      "img": "assets/img/72.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-72"
+    },
+    {
+      "id": "ART-73",
+      "title_en": "PsyAbstract Work 73",
+      "title_ru": "PsyAbstract Работа 73",
+      "img": "assets/img/73.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-73"
+    },
+    {
+      "id": "ART-74",
+      "title_en": "PsyAbstract Work 74",
+      "title_ru": "PsyAbstract Работа 74",
+      "img": "assets/img/74.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-74"
+    },
+    {
+      "id": "ART-75",
+      "title_en": "PsyAbstract Work 75",
+      "title_ru": "PsyAbstract Работа 75",
+      "img": "assets/img/75.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-75"
+    },
+    {
+      "id": "ART-76",
+      "title_en": "PsyAbstract Work 76",
+      "title_ru": "PsyAbstract Работа 76",
+      "img": "assets/img/76.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-76"
+    },
+    {
+      "id": "ART-77",
+      "title_en": "PsyAbstract Work 77",
+      "title_ru": "PsyAbstract Работа 77",
+      "img": "assets/img/77.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-77"
+    },
+    {
+      "id": "ART-78",
+      "title_en": "PsyAbstract Work 78",
+      "title_ru": "PsyAbstract Работа 78",
+      "img": "assets/img/78.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-78"
+    },
+    {
+      "id": "ART-79",
+      "title_en": "PsyAbstract Work 79",
+      "title_ru": "PsyAbstract Работа 79",
+      "img": "assets/img/79.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-79"
+    },
+    {
+      "id": "ART-80",
+      "title_en": "PsyAbstract Work 80",
+      "title_ru": "PsyAbstract Работа 80",
+      "img": "assets/img/80.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-80"
+    },
+    {
+      "id": "ART-81",
+      "title_en": "PsyAbstract Work 81",
+      "title_ru": "PsyAbstract Работа 81",
+      "img": "assets/img/81.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-81"
+    },
+    {
+      "id": "ART-82",
+      "title_en": "PsyAbstract Work 82",
+      "title_ru": "PsyAbstract Работа 82",
+      "img": "assets/img/82.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-82"
+    },
+    {
+      "id": "ART-83",
+      "title_en": "PsyAbstract Work 83",
+      "title_ru": "PsyAbstract Работа 83",
+      "img": "assets/img/83.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-83"
+    },
+    {
+      "id": "ART-84",
+      "title_en": "PsyAbstract Work 84",
+      "title_ru": "PsyAbstract Работа 84",
+      "img": "assets/img/84.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-84"
+    },
+    {
+      "id": "ART-85",
+      "title_en": "PsyAbstract Work 85",
+      "title_ru": "PsyAbstract Работа 85",
+      "img": "assets/img/85.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-85"
+    },
+    {
+      "id": "ART-86",
+      "title_en": "PsyAbstract Work 86",
+      "title_ru": "PsyAbstract Работа 86",
+      "img": "assets/img/86.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-86"
+    },
+    {
+      "id": "ART-87",
+      "title_en": "PsyAbstract Work 87",
+      "title_ru": "PsyAbstract Работа 87",
+      "img": "assets/img/87.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-87"
+    },
+    {
+      "id": "ART-88",
+      "title_en": "PsyAbstract Work 88",
+      "title_ru": "PsyAbstract Работа 88",
+      "img": "assets/img/88.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-88"
+    },
+    {
+      "id": "ART-89",
+      "title_en": "PsyAbstract Work 89",
+      "title_ru": "PsyAbstract Работа 89",
+      "img": "assets/img/89.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-89"
+    },
+    {
+      "id": "ART-90",
+      "title_en": "PsyAbstract Work 90",
+      "title_ru": "PsyAbstract Работа 90",
+      "img": "assets/img/90.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-90"
+    },
+    {
+      "id": "ART-91",
+      "title_en": "PsyAbstract Work 91",
+      "title_ru": "PsyAbstract Работа 91",
+      "img": "assets/img/91.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-91"
+    },
+    {
+      "id": "ART-92",
+      "title_en": "PsyAbstract Work 92",
+      "title_ru": "PsyAbstract Работа 92",
+      "img": "assets/img/92.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-92"
+    },
+    {
+      "id": "ART-93",
+      "title_en": "PsyAbstract Work 93",
+      "title_ru": "PsyAbstract Работа 93",
+      "img": "assets/img/93.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-93"
+    },
+    {
+      "id": "ART-94",
+      "title_en": "PsyAbstract Work 94",
+      "title_ru": "PsyAbstract Работа 94",
+      "img": "assets/img/94.jpg",
+      "uv": true,
+      "year": "2025",
+      "serial": "PSY-UVX-94"
+    }
+  ]
+}
