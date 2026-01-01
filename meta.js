@@ -1,1 +1,5 @@
-/* assets/js/meta.js placeholder – 2025-12-31T19:17:21.982533 */
+// /assets/js/meta.js — статусы/категории скелет
+window.__META__ = {
+  STATUS: { sold: [] },
+  CATS: { acrylic_neon: [], sketch: [], labyrinth_abstract: [] }
+};
