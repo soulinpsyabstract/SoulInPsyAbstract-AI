@@ -1,2 +1,296 @@
-build: static
-worker: worker/worker.js
+# SIPA.build.yaml — Soul in PsyAbstract (full, updated)
+project:
+  name: Soul in PsyAbstract
+  repo: ./
+  outDir: /htdocs
+  canonical: https://soulinpsyabstract.42web.io/
+  lang:
+    default: ru
+    supported: [ru, en]
+    storage_key: soulinpsy_lang
+  favicon: assets/img/favicon.png
+  og_image: assets/img/og_cover.jpg
+
+seo:
+  title: "Soul in PsyAbstract — Marina | messy sketch · hearts · spirals · neon · acrylic"
+  description_ru: "Честность души в линиях хаоса. Сердца и спирали. Оригиналы, принты, on-chain (NFT), заказы."
+  description_en: "Soul honesty in lines of chaos. Hearts & spirals. Originals, prints, on-chain (NFT), commissions."
+  keywords_en: ["soul in psyabstract","abstract line art","hearts and spirals","neon acrylic","Marina Saponenko","original drawings","buy abstract art","Rarible NFT"]
+  jsonld:
+    type: WebSite
+    url: https://soulinpsyabstract.42web.io/
+    name: "Soul in PsyAbstract"
+    search:
+      target: "https://soulinpsyabstract.42web.io/?q={search_term_string}"
+      input: "required name=search_term_string"
+
+hosts:
+  origin: https://soulinpsyabstract.42web.io
+  sitemap: /sitemap.xml
+  robots: /robots.txt
+
+integrations:
+  tawk:
+    property_id: "68d8492a9c33dd1951ed7462"
+    widget_id: "1j66drjvf"   # из твоего кода
+    inject: true              # вставлять перед </body> на всех страницах
+  formspree:
+    endpoint: "https://formspree.io/f/xgvnapvo"
+  notion:
+    project_notes: "https://www.notion.so/Soul-in-PsyAbstract-v1-0-f37bff9adf9a423d8c5368b59fe9387d?source=copy_link"
+  analytics:
+    search_console: true
+    ga4: null                # ключ не дан — оставляем пусто
+
+payments:
+  eth_address: "0x2a7fFb7B3174fcA16CD2476a55E39f9Ea2d04073"
+  paypal_me: "https://paypal.me/SoulInPsyAbstract?locale.x=en_US&country.x=IL"
+  paypal_fast_ncp:
+    "400":  "TU5S4WBATKB5Y"
+    "600":  "4G9HRSR622B3E"
+    "800":  "C35VA4EUKNR7Q"
+    "1000": "DWXVT5MTH3NG8"
+    "1200": "S625M8XK4LUQ6"
+    "1400": "7NE2M3WHBNSZU"
+    "1600": "3D8S966C9SAGS"
+    "1800": "UEY7U4UTWHYAU"
+    "2000": "YY2J3K4ADFQLG"
+  shipping_ncp:
+    ship150: "WN5SEBVTCPV2J"
+    ship200: "X3FPSE4E3Z2PE"
+    ship300: "VYBZADUBRHC4L"
+
+contacts:
+  email: "soulinpsyabstract@gmail.com"
+  whatsapp: "https://wa.me/972525074743"
+  telegram_primary: "https://t.me/messycketch"
+  telegram_orders_bot: "https://t.me/PsyAbstract_Orders_bot"
+  social:
+    instagram: "https://www.instagram.com/soul.in.psyabstract"
+    threads: "https://www.threads.net/@soul.in.psyabstract"
+    tiktok: "https://www.tiktok.com/@soulinpsyanstract"
+    x: "https://x.com/sexvnael1"
+    rarible: "https://og.rarible.com/soulinpsyabstract"
+    zora: "https://zora.co/@soulinpsyabstract"
+
+qr_images:  # ожидаемые имена файлов; если отсутствуют — генератор поставит base64-заглушки
+  instagram: assets/img/qr_instagram.jpg
+  telegram:  assets/img/qr_telegram_group.jpg
+  whatsapp:  assets/img/qr_whatsapp.jpg
+  threads:   assets/img/qr_threads.jpg
+  tiktok:    assets/img/qr_tiktok.jpg
+
+assets:
+  css:
+    - assets/css/fonts.css
+    - assets/css/main.css
+  js:
+    # ядро
+    - assets/js/app.js
+    - assets/js/sections.js
+    - assets/js/titles.js
+    - assets/js/hero6.js
+    - assets/js/meta.js         # из блока ниже, ВЕРБАТИМ
+    - assets/js/data.js
+    - assets/js/data-bridge.js
+    # платежи
+    - assets/js/pay-config.js   # из блока ниже
+    - assets/js/pay-shim.js     # из блока ниже
+    - assets/js/buy-hook.js
+    - assets/js/buy-modal.js
+    - assets/js/player.js
+  fonts:
+    - assets/fonts/MarckScript-Regular.ttf
+    - assets/fonts/Caveat-VariableFont_wght.ttf
+    - assets/fonts/Pacifico-Regular.ttf
+  images:
+    pattern_gallery: assets/img/%02d.jpg   # 01..94 автоматически
+    count_gallery: 94
+    favicon: assets/img/favicon.png
+    og: assets/img/og_cover.jpg
+  texts:
+    notebook: assets/texts/master_notebook_verbatim.txt
+    hero_phrases: assets/texts/hero_phrases.json
+    manifest: assets/texts/manifest.txt
+    poems: assets/texts/poems.txt
+    about: assets/texts/about.txt
+    songs_html: assets/texts/songs.html
+  audio:
+    examples:
+      - assets/audio/track01.mp3
+      - assets/audio/track02.mp3
+
+nft:
+  profile_rarible: "https://og.rarible.com/soulinpsyabstract"
+  profile_zora: "https://zora.co/@soulinpsyabstract"
+  links:  # все 21, без «обрезать до 20»
+    - https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046501
+    - https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046499
+    - https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046497
+    - https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046496
+    - https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046494
+    - https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046493
+    - https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046492
+    - https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046491
+    - https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046490
+    - https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046487
+    - https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046481
+    - https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046480
+    - https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046479
+    - https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046469
+    - https://og.rarible.com/token/0xc9154424b823b10579895ccbe442d41b9abd96ed:19223264877338955498166477182825409596884630599573943600177382871287898046465
+    - https://og.rarible.com/token/polygon/0x35f8aee672cde8e5fd09c93d2bfe4ff5a9cf0756:19223264877338955498166477182825409596884630599573943600177382871287898046476
+    - https://og.rarible.com/token/polygon/0x35f8aee672cde8e5fd09c93d2bfe4ff5a9cf0756:19223264877338955498166477182825409596884630599573943600177382871287898046475
+    - https://og.rarible.com/token/polygon/0x35f8aee672cde8e5fd09c93d2bfe4ff5a9cf0756:19223264877338955498166477182825409596884630599573943600177382871287898046474
+    - https://og.rarible.com/token/polygon/0x35f8aee672cde8e5fd09c93d2bfe4ff5a9cf0756:19223264877338955498166477182825409596884630599573943600177382871287898046472
+    - https://og.rarible.com/token/polygon/0x35f8aee672cde8e5fd09c93d2bfe4ff5a9cf0756:19223264877338955498166477182825409596884630599573943600177382871287898046471
+    - https://og.rarible.com/token/polygon/0x35f8aee672cde8e5fd09c93d2bfe4ff5a9cf0756:19223264877338955498166477182825409596884630599573943600177382871287898046470
+
+routing:
+  pages:
+    - path: /index.html
+      template: index
+      scripts_inject:
+        - assets/js/meta.js
+        - assets/js/pay-config.js
+        - assets/js/pay-shim.js
+      features: [hero_rotator, about_teaser, buy_modal, language_toggle]
+    - path: /gallery.html
+      template: gallery
+      features: [grid_01_94, buy_modal, paypal_fast_buttons, shipping_buttons, language_toggle]
+    - path: /nft.html
+      template: nft
+      features: [list_all_nfts, language_toggle]
+    - path: /manifest.html
+      template: manifest
+      source_text: assets/texts/manifest.txt
+    - path: /poems.html
+      template: preformatted
+      source_text: assets/texts/poems.txt
+    - path: /songs.html
+      template: preformatted
+      source_text: assets/texts/songs.html
+    - path: /faq.html
+      template: faq
+    - path: /contacts.html
+      template: contacts
+      features: [qr_block, contact_list, formspree_form]
+  static:
+    - /robots.txt
+    - /sitemap.xml
+    - /manifest.webmanifest
+    - /service-worker.js
+
+ui:
+  palette:
+    bg:   "#0b0d10"
+    card: "#12161b"
+    text: "#e8f4f1"
+    muted:"#9fb7af"
+    neon: "#7FFFD4"
+  effects:
+    neon_titles_breathe: true
+    card_wave_hover: true
+    backgrounds:
+      mode: random_on_load
+      variants: [ocean-neon-1, ocean-neon-2, ocean-neon-3]
+    fouc_protection: true
+
+content:
+  hero_phrases:
+    ru: [
+      "Наполни душу честностью линий.",
+      "Линия — мой голос. Я говорю ею правду.",
+      "Сердце — не форма, а место, где можно быть честной.",
+      "Спираль — круг, который идёт дальше.",
+      "Интуитивный messy sketch. Сердца и спирали.",
+      "Честность важнее идеальности."
+    ]
+    en: [
+      "Come fill the soul with honesty in lines.",
+      "The line is my voice — I speak truth with it.",
+      "A heart is not a shape but a place to be honest.",
+      "A spiral is a circle that keeps going.",
+      "Intuitive messy sketch. Hearts & spirals.",
+      "Honesty over perfection."
+    ]
+
+code_includes:
+  meta_js: |
+    (function () {
+      const FREE_IDS=[90,89,79,93,75,76,77,78,71,73,74,70,69,67,66,61,58,56,53,38,15,34,33,30,19,13,10,9,8,6];
+      const DRAFT_IDS=[68,94,64,63,52,51,50,28,26];
+      const DUPLICATE_RAW_GROUPS=[[76,79],[73,72],[60,59],[48,47,77],[46,44],[49,42],[40,39,25],[31,30,2],[23,44,17],[35,15],[14,20],[13,11],[6,7],[4,3],[1,8],[80,81],[83,84]];
+      const PRICE={sketch:400,spiral:600,acrylic:800,neon:1000};
+      const ACRYLIC_SIMPLE_IDS=[9,10,22,75,76,79,78];
+      const ACRYLIC_NEON_IDS=[2,30,31,4,3,5,21,6,7,11,13,12,14,20,15,35,16,17,41,23,24,39,40,25,29,32,33,34,36,37,38,42,49,43,44,46,45,47,48,77,53,59,60,65,67,93,94];
+      const SKETCH_IDS=[91,90,89,74,73,72,71,70,66,63,61,8,1,54];
+      const SPIRAL_IDS=[92,86,85,84,83,82,81,80,79,76,75,69,68,64,62,58,57,55,54,52,51,50,28,27,26,19,18,89,56,87,88,91];
+      const ALL_IDS=Array.from({length:94},(_,i)=>i+1);
+      const FREE=new Set(FREE_IDS),DRAFT=new Set(DRAFT_IDS),ACR_S=new Set(ACRYLIC_SIMPLE_IDS),ACR_N=new Set(ACRYLIC_NEON_IDS),SK=new Set(SKETCH_IDS),SP=new Set(SPIRAL_IDS);
+      function mergeGroups(raw){let g=raw.map(x=>new Set(x)),ch=true;while(ch){ch=false;const nx=[];while(g.length){let a=g.shift(),m=false;for(let i=0;i<g.length;i++){const b=g[i];if([...a].some(x=>b.has(x))){b.forEach(v=>a.add(v));g.splice(i,1);g.unshift(a);m=true;ch=true;break;}}if(!m)nx.push(a);}g=nx;}return g.map((s,i)=>({id:i+1,members:[...s].sort((x,y)=>x-y)}));}
+      const DUPLICATE_GROUPS=mergeGroups(DUPLICATE_RAW_GROUPS);
+      const DUP_INDEX=new Map(); DUPLICATE_GROUPS.forEach(gr=>gr.members.forEach(id=>DUP_INDEX.set(id,gr.id)));
+      function statusOf(id){if(DRAFT.has(id))return'draft'; if(FREE.has(id))return'available'; return'sold';}
+      function typeOf(id){if(ACR_N.has(id))return'neon'; if(ACR_S.has(id))return'acrylic'; if(SP.has(id))return'spiral'; if(SK.has(id))return'sketch'; return'spiral';}
+      function priceOf(id){return ({sketch:400,spiral:600,acrylic:800,neon:1000})[typeOf(id)]||600;}
+      const META_MAP=new Map(ALL_IDS.map(id=>[id,{id,status:statusOf(id),type:typeOf(id),acrylicNeon:ACR_S.has(id)||ACR_N.has(id),duplicateGroupId:DUP_INDEX.get(id)||null,priceUSD:priceOf(id),tags:[typeOf(id)]}]));
+      window.ART_ENUMS={FREE_IDS,DRAFT_IDS,ACRYLIC_SIMPLE_IDS,ACRYLIC_NEON_IDS,SKETCH_IDS,SPIRAL_IDS,DUPLICATE_GROUPS};
+      window.ART_META={getMeta:(id)=>META_MAP.get(+id),isAvailable:(id)=>statusOf(+id)==='available',isDraft:(id)=>statusOf(+id)==='draft',isSold:(id)=>statusOf(+id)==='sold'};
+    })();
+  pay_config_js: |
+    (function () {
+      window.PAYCFG = {
+        ETH_ADDRESS: '0x2a7fFb7B3174fcA16CD2476a55E39f9Ea2d04073',
+        NCP: {400:'TU5S4WBATKB5Y',600:'4G9HRSR622B3E',800:'C35VA4EUKNR7Q',1000:'DWXVT5MTH3NG8',1200:'S625M8XK4LUQ6',1400:'7NE2M3WHBNSZU',1600:'3D8S966C9SAGS',1800:'UEY7U4UTWHYAU',2000:'YY2J3K4ADFQLG'},
+        SHIPPING_NCP: {ship150:'WN5SEBVTCPV2J', ship200:'X3FPSE4E3Z2PE', ship300:'VYBZADUBRHC4L'}
+      };
+    })();
+  pay_shim_js: |
+    (function () {
+      const BR=(window.BRIDGE=window.BRIDGE||{});
+      const DD=(window.DATA=window.DATA||{});
+      const PAY=(BR.PAY=BR.PAY||(DD.PAY=DD.PAY||{}));
+      const CFG=(window.PAYCFG=window.PAYCFG||{});
+      PAY.ETH_ADDRESS=PAY.ETH_ADDRESS||"0x2a7fFb7B3174fcA16CD2476a55E39f9Ea2d04073";
+      PAY.NCP_BY_PRICE=Object.assign({400:"TU5S4WBATKB5Y",600:"4G9HRSR622B3E",800:"C35VA4EUKNR7Q",1000:"DWXVT5MTH3NG8",1200:"S625M8XK4LUQ6",1400:"7NE2M3WHBNSZU",1600:"3D8S966C9SAGS",1800:"UEY7U4UTWHYAU",2000:"YY2J3K4ADFQLG"},PAY.NCP_BY_PRICE||{});
+      PAY.SHIPPING_NCP=Object.assign({ship150:"WN5SEBVTCPV2J",ship200:"X3FPSE4E3Z2PE",ship300:"VYBZADUBRHC4L"},PAY.SHIPPING_NCP||{});
+      CFG.ETH_ADDRESS=CFG.ETH_ADDRESS||PAY.ETH_ADDRESS||"";
+      CFG.NCP=Object.assign({},CFG.NCP||{},PAY.NCP_BY_PRICE||{});
+      CFG.SHIPPING_NCP=Object.assign({},CFG.SHIPPING_NCP||{},PAY.SHIPPING_NCP||{});
+    })();
+  tawk_embed: |
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/68d8492a9c33dd1951ed7462/1j66drjvf';
+      s1.charset='UTF-8'; s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+service_worker:
+  register_on_pages: true
+  file: /service-worker.js
+  cache:
+    - /
+    - /index.html
+    - /gallery.html
+    - /nft.html
+    - /manifest.html
+    - /poems.html
+    - /contacts.html
+    - /assets/css/main.css
+    - /assets/js/app.js
+
+checks_before_publish:
+  - "canonical и og:url указывают на soulinpsyabstract.42web.io"
+  - "язык переключается и запоминается в localStorage('soulinpsy_lang')"
+  - "ротатор читает hero_phrases.json и крутит весь список"
+  - "модалка Buy считает Exclusive +200 и подставляет PayPal Fast NCP"
+  - "NFT-страница выводит все 21 ссылку из массива"
+  - "QR-изображения подставлены или стоят base64-заглушки"
