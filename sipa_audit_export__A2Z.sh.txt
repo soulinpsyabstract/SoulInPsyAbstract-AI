@@ -1,0 +1,122 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+
+export TZ="${TZ:-Asia/Jerusalem}"
+
+ROOT="/storage/emulated/0/PROJECT"
+V3="$ROOT/RUNTIME_RW/V3"
+OUT="$ROOT/_FORENSIC_SCANS"
+
+TS="$(date +%F__%H-%M-%S)"
+RDIR="$OUT/SIPA_AUDIT__A2Z__${TS}"
+mkdir -p "$RDIR"
+
+# ---- keyword net (names + content markers) ----
+KW='(user|operator|ml|ai|chat|gpt|openai|Илья|ии|пользователь|true|false|if|echo|else|core|canon|hub|psychology|definitions|forensic|legacy|artwork|selling|web|design|blood|destiny|public|present|presence|economy|payton|ip|school|sipa|governance|residen|архитектура|inbox|outbox|valid|invalid|v[0-9]|patch|protocol|module|правила|обязан|запрет|запрещено|логика|phrase|phrases|gate|watchdog|terminal|os)'
+
+# ---- output files ----
+P_TSV="$RDIR/PROTOCOL.tsv"
+M_TSV="$RDIR/MODULE.tsv"
+H_TSV="$RDIR/HUB.tsv"
+O_TSV="$RDIR/OS.tsv"
+MASTER="$RDIR/MASTER_INDEX.tsv"
+
+# headers
+printf "kind\tsource\tsize_bytes\tmtime_epoch\tsha256\tpath\n" > "$MASTER"
+printf "name\tsize_bytes\tmtime_epoch\tsha256\tpath\n" > "$P_TSV"
+printf "name\tsize_bytes\tmtime_epoch\tsha256\tpath\n" > "$M_TSV"
+printf "name\tsize_bytes\tmtime_epoch\tsha256\tpath\n" > "$H_TSV"
+printf "name\tsize_bytes\tmtime_epoch\tsha256\tpath\n" > "$O_TSV"
+
+hash_line() {
+  local f="$1"
+  local b mt h
+  b="$(stat -c %s "$f" 2>/dev/null || echo 0)"
+  mt="$(stat -c %Y "$f" 2>/dev/null || echo 0)"
+  h="$(sha256sum "$f" 2>/dev/null | awk '{print $1}' || echo '-')"
+  printf "%s\t%s\t%s\t%s\t%s\n" "$b" "$mt" "$h" "$f"
+}
+
+# 1) Find candidates by filename + (light) content grep for txt/tsv/md/sh
+#    NOTE: content grep can be heavy; still deterministic.
+CAND="$RDIR/_CANDIDATES.lst"
+: > "$CAND"
+
+find "$ROOT" -type f 2>/dev/null \
+  | grep -E '\.(txt|tsv|md|sh|json|yaml|yml|log|zip|sha256)$' \
+  | grep -Ei "$KW" \
+  | sort -u > "$CAND"
+
+# 2) Build MASTER index
+while IFS= read -r f; do
+  [ -f "$f" ] || continue
+  b="$(stat -c %s "$f" 2>/dev/null || echo 0)"
+  mt="$(stat -c %Y "$f" 2>/dev/null || echo 0)"
+  h="$(sha256sum "$f" 2>/dev/null | awk '{print $1}' || echo '-')"
+
+  kind="OTHER"
+  base="$(basename "$f")"
+
+  # classify by filename patterns (fast, deterministic)
+  if echo "$base" | grep -qiE 'protocol|core_canon|canon|governance|patch|v[0-9]'; then kind="PROTOCOL"; fi
+  if echo "$base" | grep -qiE 'module|mod_|watchdog|gate|scheduler|dedup|guard'; then kind="MODULE"; fi
+  if echo "$f"    | grep -qiE '/HUB_|/HUBS/|hub_'; then kind="HUB"; fi
+  if echo "$base" | grep -qiE 'os|structure|vault|safe|runtime_rw|registry|filesystem'; then kind="OS"; fi
+  if echo "$base" | grep -qiE 'fixation|forensic|audit|manifest|inventory|plan|scan|proof'; then kind="FORENSIC"; fi
+
+  printf "%s\t%s\t%s\t%s\t%s\t%s\n" "$kind" "FILENAME_MATCH" "$b" "$mt" "$h" "$f" >> "$MASTER"
+done < "$CAND"
+
+# 3) Split into 4 requested views: Protocol | Module | Hub | OS
+#    We intentionally keep FORENSIC in MASTER only (otherwise it pollutes).
+awk -F'\t' 'NR>1 && $1=="PROTOCOL"{print $6}' "$MASTER" | while read -r f; do
+  [ -f "$f" ] || continue
+  n="$(basename "$f")"
+  b="$(stat -c %s "$f" 2>/dev/null || echo 0)"
+  mt="$(stat -c %Y "$f" 2>/dev/null || echo 0)"
+  h="$(sha256sum "$f" 2>/dev/null | awk '{print $1}' || echo '-')"
+  printf "%s\t%s\t%s\t%s\t%s\n" "$n" "$b" "$mt" "$h" "$f" >> "$P_TSV"
+done
+
+awk -F'\t' 'NR>1 && $1=="MODULE"{print $6}' "$MASTER" | while read -r f; do
+  [ -f "$f" ] || continue
+  n="$(basename "$f")"
+  b="$(stat -c %s "$f" 2>/dev/null || echo 0)"
+  mt="$(stat -c %Y "$f" 2>/dev/null || echo 0)"
+  h="$(sha256sum "$f" 2>/dev/null | awk '{print $1}' || echo '-')"
+  printf "%s\t%s\t%s\t%s\t%s\n" "$n" "$b" "$mt" "$h" "$f" >> "$M_TSV"
+done
+
+awk -F'\t' 'NR>1 && $1=="HUB"{print $6}' "$MASTER" | while read -r f; do
+  [ -f "$f" ] || continue
+  n="$(basename "$f")"
+  b="$(stat -c %s "$f" 2>/dev/null || echo 0)"
+  mt="$(stat -c %Y "$f" 2>/dev/null || echo 0)"
+  h="$(sha256sum "$f" 2>/dev/null | awk '{print $1}' || echo '-')"
+  printf "%s\t%s\t%s\t%s\t%s\n" "$n" "$b" "$mt" "$h" "$f" >> "$H_TSV"
+done
+
+awk -F'\t' 'NR>1 && $1=="OS"{print $6}' "$MASTER" | while read -r f; do
+  [ -f "$f" ] || continue
+  n="$(basename "$f")"
+  b="$(stat -c %s "$f" 2>/dev/null || echo 0)"
+  mt="$(stat -c %Y "$f" 2>/dev/null || echo 0)"
+  h="$(sha256sum "$f" 2>/dev/null | awk '{print $1}' || echo '-')"
+  printf "%s\t%s\t%s\t%s\t%s\n" "$n" "$b" "$mt" "$h" "$f" >> "$O_TSV"
+done
+
+# 4) Hash outputs + freeze as artifacts
+sha256sum "$MASTER" > "$MASTER.sha256"
+sha256sum "$P_TSV"  > "$P_TSV.sha256"
+sha256sum "$M_TSV"  > "$M_TSV.sha256"
+sha256sum "$H_TSV"  > "$H_TSV.sha256"
+sha256sum "$O_TSV"  > "$O_TSV.sha256"
+
+chmod a-w "$MASTER" "$MASTER.sha256" "$P_TSV" "$P_TSV.sha256" "$M_TSV" "$M_TSV.sha256" "$H_TSV" "$H_TSV.sha256" "$O_TSV" "$O_TSV.sha256" 2>/dev/null || true
+
+echo "OK: SIPA_AUDIT_A2Z written → $RDIR"
+echo " - MASTER_INDEX.tsv (+sha256)"
+echo " - PROTOCOL.tsv (+sha256)"
+echo " - MODULE.tsv (+sha256)"
+echo " - HUB.tsv (+sha256)"
+echo " - OS.tsv (+sha256)"

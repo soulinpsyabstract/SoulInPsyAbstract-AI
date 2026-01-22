@@ -1,0 +1,48 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -u
+
+export PAYTON_ROOT="${PAYTON_ROOT:-/storage/emulated/0/PROJECT/PAYTON_HUBS}"
+
+payton_now() { date +%Y-%m-%d_%H%M; }
+
+payton_cd() { cd "$PAYTON_ROOT" || return 1; }
+
+payton_registry_add() {
+  local tag="${1:-NA}"
+  local status="${2:-NA}"
+  local note="${3:-}"
+  mkdir -p "$PAYTON_ROOT/LOGS"
+  [ -f "$PAYTON_ROOT/LOGS/_RUN_REGISTRY.tsv" ] || echo -e "date_time\ttag\trun\tout\tstatus\tnote" > "$PAYTON_ROOT/LOGS/_RUN_REGISTRY.tsv"
+  echo -e "$(payton_now)\t${tag}\t${RUN:-NA}\t${OUT:-NA}\t${status}\t${note}" >> "$PAYTON_ROOT/LOGS/_RUN_REGISTRY.tsv"
+}
+
+payton_log() {
+  mkdir -p "$PAYTON_ROOT/LOGS"
+  local f="$PAYTON_ROOT/LOGS/PAYTON_LOG_$(date +%Y-%m-%d).txt"
+  echo "$@" | tee -a "$f"
+}
+
+payton_req() {
+  command -v "$1" >/dev/null 2>&1 || { echo "❌ Missing: $1"; return 1; }
+}
+
+# Apply gate expects $OUT/_MOVE_PLAN.txt and will refuse if plan is empty or unsafe
+payton_apply_gate() {
+  [ -n "${OUT:-}" ] || { echo "❌ OUT not set"; return 1; }
+  [ -d "$PAYTON_ROOT/$OUT" ] || { echo "❌ OUT folder missing: $OUT"; return 1; }
+  [ -f "$PAYTON_ROOT/$OUT/_MOVE_PLAN.txt" ] || { echo "❌ _MOVE_PLAN.txt missing"; return 1; }
+
+  local plan="$PAYTON_ROOT/$OUT/_MOVE_PLAN.txt"
+  local moves
+  moves=$(grep -c '^MOVE' "$plan" 2>/dev/null || echo 0)
+
+  [ "$moves" -gt 0 ] || { echo "❌ No MOVE lines. Nothing to apply."; return 1; }
+
+  # hard safety: forbid applying to PROJECT itself, forbid applying to PAYTON_ROOT, forbid empty paths
+  if grep -Eq 'MOVE[[:space:]]+(/storage/emulated/0/PROJECT/PAYTON_HUBS|/storage/emulated/0/PROJECT|/storage/emulated/0/PROJECT/|/storage/emulated/0/PROJECT/PAYTON_HUBS/?)$' "$plan"; then
+    echo "❌ Unsafe MOVE target (project root)."; return 1
+  fi
+
+  echo "✅ SAFE APPLY GATE PASSED"
+  return 0
+}

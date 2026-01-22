@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+T_BASH="/data/data/com.termux/files/usr/bin/bash"
+
+"$T_BASH" day_boot_v2.sh
+"$T_BASH" day_scan_clean_v2.sh
+"$T_BASH" day_close_v2.sh
+"$T_BASH" week_scan_clean_v2.sh

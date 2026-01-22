@@ -1,0 +1,8 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+DATE=$(date +%F_%H%M)
+OUT="/storage/emulated/0/PROJECT/WORKSHOP/EXPORTS/release_${DATE}.zip"
+cd /storage/emulated/0/PROJECT/WORKSHOP
+zip -r9 "$OUT" SITES COPY EDITORIAL >/dev/null
+sha256sum "$OUT" > "${OUT}.sha256.txt"
+echo "OK: $OUT"

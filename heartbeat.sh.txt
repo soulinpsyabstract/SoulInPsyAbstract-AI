@@ -1,0 +1,12 @@
+#!/data/data/com.termux/files/usr/bin/sh
+
+HUB="/storage/emulated/0/PROJECT/PAYTON_HUBS"
+FIX="$HUB/HUB_CORE/FIXATION"
+STAMP="$(date '+%Y-%m-%d_%H-%M-%S')"
+
+{
+echo "HEARTBEAT LOG"
+echo "TIME: $STAMP"
+echo "STATE: SYSTEM ALIVE"
+echo "-----------------------"
+} >> "$FIX/HEARTBEAT_LOG.txt"

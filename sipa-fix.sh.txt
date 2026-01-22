@@ -1,0 +1,27 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+
+CORE="/storage/emulated/0/PROJECT/PAYTON_HUBS/CORE_V2"
+VALID="$CORE/VALID.list"
+LOG="$CORE/AUDIT.log"
+
+TS_START="$(date '+%Y-%m-%d %H:%M:%S')"
+ZIP_NAME="RESULT__$(date '+%Y-%m-%d__%H-%M-%S').zip"
+ZIP="$CORE/$ZIP_NAME"
+
+echo "[FIX] $TS_START — Начинаю упаковку..." >> "$LOG"
+
+# Упаковка без дублей по basename
+sed "s|^|/|" < "$VALID" \
+  | sort -u \
+  | awk -F/ '!seen[$NF]++' \
+  | zip -j "$ZIP" -@ >/dev/null
+
+# SHA256
+sha256sum "$ZIP" > "${ZIP}.sha256"
+SHA="$(awk '{print $1}' "${ZIP}.sha256")"
+TS_END="$(date '+%Y-%m-%d__%H-%M-%S')"
+
+# Финальная фиксация
+echo "[FIX] $TS_END — Пакет создан: $ZIP_NAME (SHA=$SHA)" >> "$LOG"
+echo "OK: Пакет $ZIP_NAME создан (SHA=$SHA)."

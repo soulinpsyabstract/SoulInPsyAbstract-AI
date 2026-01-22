@@ -1,0 +1,13 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -u
+PAYTON_ROOT="${PAYTON_ROOT:-/storage/emulated/0/PROJECT/PAYTON_HUBS}"
+cd "$PAYTON_ROOT" || exit 1
+
+echo "PAYTON_ROOT=$PAYTON_ROOT"
+echo ""
+echo "HUBS:"
+ls -d HUB_* 2>/dev/null | sort
+echo ""
+echo "Quick:"
+echo "  ls LOGS | tail"
+echo "  tail -n 40 LOGS/PAYTON_LOG_$(date +%Y-%m-%d).txt"

@@ -1,0 +1,82 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+
+# === PAYTON RUNTIME v1.1.4 · PATCH 02 ===
+# MODE: GOVERNANCE / VALIDATION ONLY
+# NON-DESTRUCTIVE: TRUE
+# ALWAYS: LOG + MANIFEST + HASH + ZIP + VERIFY
+# NO INTERPRETATION. NO OPTIMIZATION.
+
+ROOT="/storage/emulated/0/PROJECT/PAYTON_HUBS"
+EXPORT_ROOT="$ROOT/_FIXATION/_EXPORTS"
+TS="$(date +%Y-%m-%d_%H-%M-%S)"
+RUN_NAME="RUNTIME_DAILY_0000_$TS"
+OUT="$EXPORT_ROOT/$RUN_NAME"
+
+# SOURCES (read-only intent)
+SRC_DIRS=(
+  "$ROOT/HUB_CORE"
+  "$ROOT/HUB_ARTWORK_SELLING"
+  "/storage/emulated/0/FORENSIC LEGAL HUB · Soul In PsyAbstract"
+)
+
+mkdir -p "$OUT"/{LOGS,MANIFESTS,HASHES,ZIP}
+
+LOG="$OUT/LOGS/$RUN_NAME.log"
+exec > >(tee -a "$LOG") 2>&1
+
+echo "RUN_START=$TS"
+echo "RUN_NAME=$RUN_NAME"
+echo "MODE=GOVERNANCE_VALIDATION_ONLY"
+echo "NON_DESTRUCTIVE=TRUE"
+echo "ROOT=$ROOT"
+
+MANIFEST="$OUT/MANIFESTS/MANIFEST_FILES_$TS.txt"
+: > "$MANIFEST"
+
+echo "== SOURCES_SCAN =="
+for DIR in "${SRC_DIRS[@]}"; do
+  if [ -d "$DIR" ]; then
+    echo "SCAN_OK=$DIR"
+    # files list, stable sorting
+    find "$DIR" -type f 2>/dev/null | sort >> "$MANIFEST"
+  else
+    echo "SCAN_MISSING_DIR=$DIR"
+    echo "RUN_STATUS=INVALID"
+    exit 1
+  fi
+done
+
+MANIFEST_LINES="$(wc -l < "$MANIFEST" | tr -d ' ')"
+echo "MANIFEST_CREATED_LINES=$MANIFEST_LINES"
+
+# HASHES: safe for spaces; avoid arg explosion
+HASHFILE="$OUT/HASHES/SHA256_FILES_$TS.txt"
+: > "$HASHFILE"
+
+echo "== HASH_FILES =="
+# If manifest is huge, you can cap here, but canon says ALWAYS full.
+# If you must cap on phone later, do it as PATCH, not silently.
+while IFS= read -r f; do
+  [ -f "$f" ] && sha256sum "$f" >> "$HASHFILE"
+done < "$MANIFEST"
+
+# Hash the artifacts themselves
+sha256sum "$LOG" > "$LOG.sha256"
+sha256sum "$MANIFEST" > "$MANIFEST.sha256"
+sha256sum "$HASHFILE" > "$HASHFILE.sha256"
+
+ZIPFILE="$OUT/ZIP/${RUN_NAME}.zip"
+echo "== ZIP_BUILD =="
+( cd "$OUT" && zip -r "ZIP/${RUN_NAME}.zip" LOGS MANIFESTS HASHES >/dev/null )
+
+echo "== ZIP_HASH =="
+sha256sum "$ZIPFILE" > "$ZIPFILE.sha256"
+
+echo "== ZIP_VERIFY =="
+sha256sum -c "$ZIPFILE.sha256"
+
+echo "RUN_STATUS=VALID"
+echo "ARTIFACT_ZIP=$ZIPFILE"
+echo "ARTIFACT_ZIP_SHA=$ZIPFILE.sha256"
+echo "RUN_COMPLETE=$(date -Iseconds)"

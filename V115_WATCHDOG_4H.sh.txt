@@ -1,0 +1,68 @@
+#!/data/data/com.termux/files/usr/bin/bash
+set -euo pipefail
+
+# =========================
+# PAYTON SUIT · CORE CANON v1.1.5
+# PATCH 02 — WATCHDOG (OBSERVABILITY ONLY)
+# MODE: GOVERNANCE / VALIDATION ONLY
+# NON-DESTRUCTIVE: TRUE
+# =========================
+
+ROOT="/storage/emulated/0/PROJECT/PAYTON_HUBS"
+EXPORT_ROOT="$ROOT/_FIXATION/_EXPORTS"
+TS="$(date +%Y-%m-%d_%H-%M-%S)"
+RUN_NAME="V115_WATCHDOG_4H_$TS"
+OUT="$EXPORT_ROOT/$RUN_NAME"
+
+mkdir -p "$OUT"/{LOGS,HASHES,ZIP}
+LOG="$OUT/LOGS/$RUN_NAME.log"
+exec > >(tee -a "$LOG") 2>&1
+
+echo "RUN_START=$TS"
+echo "MODE=GOVERNANCE_VALIDATION_ONLY"
+echo "PATCH=v1.1.5_PATCH02_WATCHDOG_4H"
+echo "RULE=OBSERVE_ONLY;NO_EXECUTION"
+
+LAST="$(ls -d "$EXPORT_ROOT"/RUNTIME_4H_* 2>/dev/null | tail -n 1 || true)"
+echo "LAST_RUNTIME_4H=$LAST"
+
+STATUS="UNKNOWN"
+
+if [ -z "$LAST" ]; then
+  echo "STATE=NO_BASELINE"
+  echo "MEANING=No previous RUNTIME_4H found."
+else
+  LAST_TS="$(basename "$LAST" | sed 's/^RUNTIME_4H_//')"
+  NOW_EPOCH="$(date +%s)"
+  LAST_EPOCH="$(date -d "${LAST_TS//_/ }" +%s 2>/dev/null || echo 0)"
+
+  if [ "$LAST_EPOCH" -eq 0 ]; then
+    echo "STATE=PARSE_FAIL"
+    echo "MEANING=Timestamp parse failed."
+  else
+    DELTA_SEC=$((NOW_EPOCH - LAST_EPOCH))
+    echo "DELTA_SECONDS=$DELTA_SEC"
+
+    if [ "$DELTA_SEC" -gt 16200 ]; then
+      echo "STATE=MISSED"
+      echo "MEANING=No runtime within 4h30m window."
+      STATUS="MISSED"
+    else
+      echo "STATE=OK_WINDOW"
+      echo "MEANING=Runtime within tolerance window."
+      STATUS="OK"
+    fi
+  fi
+fi
+
+sha256sum "$LOG" > "$LOG.sha256"
+
+ZIPFILE="$OUT/ZIP/${RUN_NAME}.zip"
+( cd "$OUT" && zip -r "ZIP/${RUN_NAME}.zip" LOGS >/dev/null )
+
+sha256sum "$ZIPFILE" > "$ZIPFILE.sha256"
+sha256sum -c "$ZIPFILE.sha256"
+
+echo "RUN_STATUS=VALID"
+echo "WATCHDOG_STATUS=$STATUS"
+echo "ARTIFACT_ZIP=$ZIPFILE"
