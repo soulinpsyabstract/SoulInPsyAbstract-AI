@@ -26,3 +26,48 @@ jobs:
       run: |
         npm install
         npx webpack
+# Add these changes inside the job that runs the build
+strategy:
+  fail-fast: false
+  matrix:
+    node-version: [18.x, 20.x, 22.x]
+
+steps:
+  - uses: actions/checkout@v4
+
+  - name: Setup Node
+    uses: actions/setup-node@v4
+    with:
+      node-version: ${{ matrix.node-version }}
+      cache: 'npm'
+
+  - name: Diagnostics — environment
+    run: |
+      set -x
+      echo "USER: $(whoami)"
+      echo "PWD: $(pwd)"
+      echo "GIT SHA: $(git rev-parse --short HEAD)"
+      node --version
+      npm --version
+      env | sort
+
+  - name: Install dependencies (verbose)
+    run: |
+      set -o pipefail
+      npm ci --prefer-offline --no-audit --progress=false 2>&1 | tee ci-install.log
+      ls -la
+      tail -n +1 ci-install.log | sed -n '1,200p'
+
+  - name: Build (capture exit code and logs)
+    run: |
+      set -o pipefail
+      npm run build --loglevel verbose 2>&1 | tee build.log || true
+      rc=${PIPESTATUS[0]}
+      echo "BUILD_EXIT_CODE=$rc" > build-exit.txt
+      tail -n 200 build.log || true
+      cat build-exit.txt
+      # fail explicitly after printing logs so Actions shows the failure
+      if [ "$rc" -ne 0 ]; then
+        echo "Build failed with exit code $rc"
+        exit $rc
+      fi
